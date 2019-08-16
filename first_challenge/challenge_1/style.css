@@ -1,0 +1,77 @@
+body{
+    background-color: white
+}
+
+/* Circles Stuff */
+.selected{border: 1px solid black}
+.circle{
+    position: relative;
+    border-radius: 50%;
+}
+.outer{
+    width: 40px;
+    height: 40px;
+
+}
+
+.inner{
+    top: 10%; left: 10%;
+    width: 80%;
+    height: 80%;
+}
+
+
+
+/*
+.circle {
+    color: black;
+    font-size: 3.5rem;
+    padding: 0 0.5rem;
+    height: 20px;
+    width: 20px;
+}
+.circle::before{
+    
+    content: '\25CF';
+    contain: content;
+    cursor: pointer;
+}
+*/
+
+#red {background-color: red}
+#yellow {background-color: yellow}
+#orange {background-color: orange}
+#purple {background-color: purple}
+#black {background-color: black}
+#white {background-color: white}
+#pink {background-color: pink}
+#navy {background-color: navy}
+#peach {background-color: peachpuff}
+#blood_orange{background-color: orangered}
+#lime_green{background-color: limegreen}
+#green{background-color: green}
+#light_brown{background-color: brown}
+#cyan{background-color: cyan}
+#turquoise{background-color: turquoise}
+#grey{background-color: grey}
+#ruler{background-color: royalblue}
+#crown{background-color: goldenrod}
+
+
+
+/* Star stuff */
+.star {
+    color: black;
+    font-size: 1.0rem;
+    padding: 0 0.3rem;
+}
+
+.star::before {
+    content: '\2606';
+    cursor: pointer;
+}
+
+.star.rated::before {
+    content: '\2605';
+}
+
