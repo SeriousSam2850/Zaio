@@ -1,11 +1,11 @@
 
 body{
     background-color: white;
-    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace !important
 }
 
 *{
-    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace !important
 }
 
 div {
