@@ -1,11 +1,22 @@
-document.addEventListener('DOMContentLoaded', function(){
-    let stars = document.querySelectorAll('.star');
-    stars.forEach(function(star){
-        stars.addEventListener('click', setRating);
+
+
+let circles = document.getElementsByClassName("outer");
+
+for (let index = 0; index < circles.length; index++) {
+    const element = circles[index];
+    element.addEventListener('click', function() {
+        select(element);
     })
+}
 
-    let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
-    let target = stars[rating - 1];
-    target.dispatchEvent(new MouseEvent('click'));
+function select(element) {
 
-});
+    for (i = 0; i < circles.length; i++) {
+        circles[i].className = "outer circle";
+    }
+    element.className += " selected";
+
+    let circle = element.getElementsByClassName('inner');
+    
+    document.getElementById('colour').textContent = "COLOR: " + circle[0].id;
+}

@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HICKIES</title>
-    <script src="store.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+   
+    
     
 </head>
 <body>
@@ -15,16 +14,17 @@
     <!-- Header Stuff -->
 
     <!-- Stars and reviews -->
-    <div>
-        <span class="Stars" data-rating="3">
+    <div class="d-flex flex-row mb-3">
+
+        <div class="Stars" data-rating="3">
             <span class="star">&nbsp;</span>
             <span class="star">&nbsp;</span>
             <span class="star">&nbsp;</span>
             <span class="star">&nbsp;</span>
             <span class="star">&nbsp;</span>
-        </span>
+        </div>
         <!-- reviews -->
-        <span class="review">1,234 reviews</span>
+        <div class="review">1,234 reviews</div>
 
     </div>
 
@@ -42,74 +42,72 @@
     </div>
     <br>
     <!-- Need a var here for the color string -->
-    <h4>COLOR: </h4>
+    <h4 id="colour">COLOR: Purple </h4>
 
         <!-- Colors -->
 
-        <div class="colours">
 
             <div class="d-flex flex-row mb-3">
 
                 <div class="outer circle">
-                    <div class="inner circle" id="red">&nbsp;</div>
+                    <div class="inner circle" id="Red">&nbsp;</div>
+                </div>
+                <div class="outer circle selected">
+                    <div class="inner circle" id="Purple">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="yellow">&nbsp;</div>
+                    <div class="inner circle" id="Black">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="orange">&nbsp;</div>
+                    <div class="inner circle" id="White">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="purple">&nbsp;</div>
+                    <div class="inner circle" id="Orange">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="black">&nbsp;</div>
+                    <div class="inner circle" id="Yellow">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="white">&nbsp;</div>
+                    <div class="inner circle" id="Blue">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="pink">&nbsp;</div>
+                    <div class="inner circle" id="Navy">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="navy">&nbsp;</div>
+                    <div class="inner circle" id="Peach">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="peach">&nbsp;</div>
+                    <div class="inner circle" id="Light_Blue">&nbsp;</div>
                 </div>
                 <div class="outer circle">
-                    <div class="inner circle" id="blood_orange">&nbsp;</div>
-                </div>
-                <div class="outer circle">
-                    <div class="inner circle" id="lime_green">&nbsp;</div>
+                    <div class="inner circle" id="Lime_Green">&nbsp;</div>
                 </div>
             </div>
-        </div>
+        
 
-        <div class="d-flex flex-row mb-3">
-            <div class="outer circle ">
-                <div class="inner circle" id="green">&nbsp;</div>
+            <div class="d-flex flex-row mb-3">
+                <div class="outer circle">
+                    <div class="inner circle" id="Pink">&nbsp;</div>
+                </div>
+                <div class="outer circle">
+                    <div class="inner circle" id="Blood_Orange">&nbsp;</div>
+                </div>
+                <div class="outer circle">
+                    <div class="inner circle" id="Green">&nbsp;</div>
+                </div>
+                <div class="outer circle">
+                    <div class="inner circle" id="Dark_Grey">&nbsp;</div>
+                </div>
+                <div class="outer circle">
+                    <div class="inner circle" id="Brown">&nbsp;</div>
+                </div>
+                <div class="outer circle">
+                    <div class="inner circle" id="Cyan">&nbsp;</div>
+                </div>
+                <div class="outer circle">
+                    <div class="inner circle" id="Light_Grey">&nbsp;</div>
+                </div>
             </div>
-            <div class="outer circle ">
-                <div class="inner circle" id="light_brown">&nbsp;</div>
-            </div>
-            <div class="outer circle ">
-                <div class="inner circle" id="cyan">&nbsp;</div>
-            </div>
-            <div class="outer circle ">
-                <div class="inner circle" id="turquoise">&nbsp;</div>
-            </div>
-            <div class="outer circle ">
-                <div class="inner circle" id="grey">&nbsp;</div>
-            </div>
-            <div class="outer circle ">
-                <div class="inner circle" id="ruler">&nbsp;</div>
-            </div>
-            <div class="outer circle ">
-                <div class="inner circle" id="crown">&nbsp;</div>
-            </div>
-        </div>
-
         <!-- colors must change the var name -->
 
 
@@ -136,6 +134,15 @@
     <hr>
     <h4>Need Help?</h4>
     <h5>Shipping & Returns</h5>
+
+    <script src="store.js"></script>
+
+     
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </body>
 </html>

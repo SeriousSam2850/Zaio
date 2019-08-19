@@ -1,6 +1,19 @@
+
 body{
-    background-color: white
+    background-color: white;
+    font-weight: bold;
 }
+
+*{
+    font-weight: bold;
+}
+
+div {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-content: center;
+    align-content: center;
+  }
 
 /* Circles Stuff */
 .selected{border: 1px solid black}
@@ -20,42 +33,25 @@ body{
     height: 80%;
 }
 
+#Red {background-color: rgb(210, 37, 50)}
+#Purple {background-color: rgb(105, 40, 240)}
+#Black {background-color: black}
+#White {background-color: white}
+#Orange {background-color: orange}
+#Yellow {background-color: yellow}
+#Blue {background-color: rgb(30, 85, 165)}
+#Navy {background-color: rgb(40, 90, 123)}
+#Peach {background-color: rgb(215, 180, 155)}
+#Light_Blue{background-color: rgb(85, 195, 245)}
+#Lime_Green{background-color: lime}
 
-
-/*
-.circle {
-    color: black;
-    font-size: 3.5rem;
-    padding: 0 0.5rem;
-    height: 20px;
-    width: 20px;
-}
-.circle::before{
-    
-    content: '\25CF';
-    contain: content;
-    cursor: pointer;
-}
-*/
-
-#red {background-color: red}
-#yellow {background-color: yellow}
-#orange {background-color: orange}
-#purple {background-color: purple}
-#black {background-color: black}
-#white {background-color: white}
-#pink {background-color: pink}
-#navy {background-color: navy}
-#peach {background-color: peachpuff}
-#blood_orange{background-color: orangered}
-#lime_green{background-color: limegreen}
-#green{background-color: green}
-#light_brown{background-color: brown}
-#cyan{background-color: cyan}
-#turquoise{background-color: turquoise}
-#grey{background-color: grey}
-#ruler{background-color: royalblue}
-#crown{background-color: goldenrod}
+#Pink{background-color: rgb(254, 50, 180)}
+#Blood_Orange{background-color: orangered}
+#Green{background-color: rgb(70, 140, 100)}
+#Dark_Grey{background-color: grey}
+#Brown{background-color: #6E502B}
+#Cyan{background-color: cyan}
+#Light_Grey{background-color:#ccc}
 
 
 
@@ -63,15 +59,11 @@ body{
 .star {
     color: black;
     font-size: 1.0rem;
-    padding: 0 0.3rem;
+    padding: 0 0.1rem;
 }
 
 .star::before {
-    content: '\2606';
-    cursor: pointer;
-}
-
-.star.rated::before {
     content: '\2605';
+    cursor: pointer;
 }
 
