@@ -66,7 +66,9 @@ function select(element) {
         modalNumber.textContent = parseInt(modalNumber.textContent) + 1;
    }
    function minus_one() {
-        modalNumber.textContent = parseInt(modalNumber.textContent) - 1;
+       if (parseInt(modalNumber.textContent) > 0) {
+            modalNumber.textContent = parseInt(modalNumber.textContent) - 1;
+       }
    }
    function addToTotal() {
         totalNumber.textContent = modalNumber.textContent;

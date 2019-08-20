@@ -8,8 +8,6 @@
    
     
      <link rel="stylesheet" href="flex.css">
-     
-     <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet"> 
 
      <link rel="stylesheet" href="style.css">
     
@@ -19,7 +17,7 @@
     <!-- Header Stuff -->
 
     <!-- Stars and reviews -->
-    <div class="d-flex flex-row mb-3">
+    <div class="d-flex flex-row mb-3 in">
 
         <div class="Stars" data-rating="3">
             <span class="star">&nbsp;</span>
@@ -29,20 +27,28 @@
             <span class="star">&nbsp;</span>
         </div>
         <!-- reviews -->
-        <div class="review">1,234 reviews</div>
+        <div class="grey">1,234 reviews</div>
 
     </div>
 
     <!-- Prices -->
-    <br>
-    <div>
-        <span class="">$15.99</span>
+
+    <div class="d-flex flex-row mb-3 row">
+        <div id="price">
+            <div class="">$14.99</div>
+        </div>
+        <div>
+            <div class="grey" id="old_pice">$17.99</div>
+        </div>
+        <div>
+            <div class="grey" id="sale">25% OFF</div>
+        </div>
     </div>
 
     <br>
     <!-- ONLINE EXCLUSIVE -->
     
-    <div>
+    <div class="in">
         <h6>ONLINE EXCLUSIVE</h6>
     </div>
     <br>
@@ -52,7 +58,7 @@
         <!-- Colors -->
 
 
-            <div class="d-flex flex-row mb-10">
+            <div class="d-flex flex-row mb-3">
 
                 <div class="outer circle">
                     <div class="inner circle" id="Red">&nbsp;</div>
@@ -90,7 +96,7 @@
             </div>
         
 
-            <div class="d-flex flex-row mb-10">
+            <div class="d-flex flex-row mb-10 fle">
                 <div class="outer circle">
                     <div class="inner circle" id="Pink">&nbsp;</div>
                 </div>
@@ -117,7 +123,7 @@
 
 
     <!-- Size Guide -->
-    
+    <br>
     <h6>Size Guide</h6>
     <br>
 
@@ -127,16 +133,21 @@
     <br>
 
     <!-- Rounded Buttons -->
-    <div class="buttons">
+    <div>
         <!-- Need a var here for number of items -->
-        <h3 id="colourCount">0</h3>
-        <button id="add_to_cart">Add to Cart</button>
+        <div id="colourCountBox">
+            <h3 id="colourCount">0</h3>
+        </div>
+        <button class="buttons" id="add_to_cart">Add to Cart</button>
     </div>
     <!-- Easy shit -->
     <br>
-    <hr>
+    <div class="line"></div>
+    <br>
     <h5>DETAILS</h5>
-    <hr>
+    <br>
+    <div class="line"></div>
+    <br>
     <h4>Need Help?</h4>
     <h5>Shipping & Returns</h5>
 
@@ -146,7 +157,7 @@
             <h6>Please add the quantity of the item you have selected</h6>
             
             <div id="colorRow">
-                    <h6 class="colorName" id="clrName">Color Name</h6>
+                    <h6 class="colorName" id="clrName">Purple</h6>
                     <button class="countBtn" id="minus">-</button>
                     <h1 id="count">0</h1>
                     <button class="countBtn" id="plus">+</button>
