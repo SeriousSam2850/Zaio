@@ -8,10 +8,8 @@
    
     
      <link rel="stylesheet" href="flex.css">
-<!--
      
      <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet"> 
-        -->
 
      <link rel="stylesheet" href="style.css">
     
@@ -49,7 +47,7 @@
     </div>
     <br>
     <!-- Need a var here for the color string -->
-    <h4 id="colour">COLOR: Purple </h4>
+    <h4 class="colorName">COLOR: Purple </h4>
 
         <!-- Colors -->
 
@@ -131,8 +129,8 @@
     <!-- Rounded Buttons -->
     <div class="buttons">
         <!-- Need a var here for number of items -->
-        <button></button>
-        <button>Add to Cart</button>
+        <h3 id="colourCount">0</h3>
+        <button id="add_to_cart">Add to Cart</button>
     </div>
     <!-- Easy shit -->
     <br>
@@ -142,13 +140,28 @@
     <h4>Need Help?</h4>
     <h5>Shipping & Returns</h5>
 
+    <!-- Modal -->
+    <div class="modalCheckOut" id="popup">
+        <div class="modal-content">
+            <h6>Please add the quantity of the item you have selected</h6>
+            
+            <div id="colorRow">
+                    <h6 class="colorName" id="clrName">Color Name</h6>
+                    <button class="countBtn" id="minus">-</button>
+                    <h1 id="count">0</h1>
+                    <button class="countBtn" id="plus">+</button>
+            </div>
+
+            <!-- The buttons and number of items -->
+            <div id="buttonRow">
+                <h3 id="agreeBtn" class="Btn closeBtn">Agree</h3>
+                <h3 id="cancleBtn" class="Btn closeBtn">Cancle</h3>
+            </div>
+        </div>
+    </div>
+
+
     <script src="store.js"></script>
-
-   
-     
-
-
-    
 
 </body>
 </html>

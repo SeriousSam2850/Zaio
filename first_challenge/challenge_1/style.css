@@ -1,11 +1,8 @@
 
 body{
     background-color: white;
-    font-family: 'Courier New', Courier, monospace !important
-}
-
-*{
-    font-family: 'Courier New', Courier, monospace !important
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
 }
 
 div {
@@ -21,6 +18,12 @@ div {
     position: relative;
     border-radius: 50%;
 }
+
+.circle:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
 .outer{
     width: 40px;
     height: 40px;
@@ -53,6 +56,78 @@ div {
 #Cyan{background-color: cyan}
 #Light_Grey{background-color:#ccc}
 
+
+/* Modal stuff */
+
+#popup {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    left: 0; top: 0;
+    height: 100%; width: 100%;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.modal-content {
+    color: black;
+    background-color: #ccc;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    height: 40%;
+}
+/* Content in the middle */
+#colorRow {
+    position: relative;
+    background-color: white;
+    top: 25%;
+}
+#clrName {
+    color: black;
+    padding: 30px;
+    background-color: coral;
+    text-align: center;
+    align-self: center;
+}
+.countBtn {
+    align-self: center;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: black;
+}
+#count {
+    background-color: #6E502B;
+    align-self: center;
+}
+
+/* Agree and cancle buttons */
+#buttonRow {
+    color: black;
+    position: relative;
+    top: 40%;
+}
+.Btn {
+    position: relative;
+    left: 60%;
+    border-radius: 12px;
+    color: black;
+    margin-right: 5%;
+}
+.Btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer; 
+}
+#agreeBtn {
+    background-color: lightgreen;    
+}
+
+#cancleBtn {
+    background-color:lightcoral;
+}
 
 
 /* Star stuff */
