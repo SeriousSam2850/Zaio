@@ -50,7 +50,6 @@ function select(element) {
    add_to_cart.addEventListener('click', openModal);
    cancle.addEventListener('click', closeModal);
    agree.addEventListener('click', addToTotal);
-   agree.addEventListener('click', closeModal);
    minus.addEventListener('click', minus_one);
    plus.addEventListener('click', add_one);
 
@@ -72,9 +71,11 @@ function select(element) {
    }
    function addToTotal() {
         totalNumber.textContent = modalNumber.textContent;
-        add_to_cart.textContent = "Check Out";
+        add_to_cart.textContent = "Check out now";
         modalNumber.textContent = '0';
+        modal.style.display = 'none';
    }
+
 
 
 

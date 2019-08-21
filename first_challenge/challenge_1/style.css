@@ -4,6 +4,8 @@ body{
     background-color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 20px;
+    align-self: center;
+    align-content: center;
 }
 
 .in {
@@ -86,90 +88,6 @@ div {
     border-radius: 30px;
 }
 
-/* Modal stuff */
-#popup {
-    display: none;
-    position: fixed;
-    overflow: auto;
-    left: 0; top: 0;
-    height: 100%; width: 100%;
-    background-color: rgba(0, 0, 0, 0.5)
-}
-
-.modal-content {
-    color: black;
-    background-color: #ccc;
-    margin: 10% auto;
-    padding: 20px;
-    width: 50%;
-    height: 40%;
-}
-/* Content in the middle */
-#colorRow {
-    position: relative;
-    background-color: white;
-    top: 25%;
-}
-#clrName {
-    color: black;
-    padding: 30px;
-    background-color: coral;
-    text-align: center;
-    align-self: center;
-}
-.countBtn {
-    align-self: center;
-    background-color: black;
-    color: white;
-    font-size: 50px;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    border: black;
-}
-#count {
-    background-color: #6E502B;
-    align-self: center;
-}
-
-/* Agree and cancle buttons */
-#buttonRow {
-    color: black;
-    position: relative;
-    top: 40%;
-}
-.Btn {
-    position: relative;
-    left: 60%;
-    border-radius: 12px;
-    color: black;
-    margin-right: 5%;
-}
-.Btn:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    cursor: pointer; 
-}
-#agreeBtn {
-    background-color: lightgreen;    
-}
-
-#cancleBtn {
-    background-color:lightcoral;
-}
-
-
-/* Star stuff */
-.star {
-    color: black;
-    font-size: 1.0rem;
-    padding: 0 0.1rem;
-}
-
-.star::before {
-    content: '\2605';
-    cursor: pointer;
-}
-
 .line {
     background-color: rgba(0, 0, 0, 0.7);
     height: 1px;
@@ -181,6 +99,112 @@ div {
     font: bolder;
     color: red;
 }
+
 .grey {
-    color: grey;
+    color: lightgray;
+    font-size: 80%;
 }
+
+.down {
+    text-align: center;
+    margin-top: 10%;
+    margin-inline-end: 15%;
+}
+
+/* Modal stuff */
+#popup {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    left: 0; top: 0;
+    height: 100%; width: 100%;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.modal-content {
+    position: fixed;
+    left: 20%;
+    color: black;
+    margin: 10% auto;
+    padding: 20px;
+    width: 500px;
+    height: 300px;
+}
+/* Content in the modal */
+#colorRow {
+    position: relative;
+    background-color: white;
+    top: 25%;
+}
+#clrName {
+    color: black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    align-self: center;
+}
+.countBtn {
+    align-self: center;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-inline-start: 6%;
+    border: black;
+}
+#minus{
+    margin-inline-start: 15%;
+}
+#count {
+    align-self: center;
+    margin-inline-start: 6%;
+}
+
+/* Agree and cancle buttons */
+#buttonRow {
+    color: black;
+    position: relative;
+    top: 40%;
+}
+.Btn {
+    position: relative;
+    left: 50%;
+    border-radius: 6px;
+    color: black;
+    margin-right: 5%;
+}
+.Btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer; 
+}
+#agreeBtn {
+    background-color: lightgreen;   
+    width: 85px;
+    border: rgba(0, 0, 0, 0.2) solid 1px; 
+}
+
+#cancleBtn {
+    background-color:lightcoral;
+    width: 100px;
+    border: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+
+/* Star stuff */
+.spaces {
+    margin-inline-end: 4%;
+    position: relative;
+    width: 15%;
+}
+
+.star {
+    color: black;
+    font-size: 1.0rem;
+}
+
+.star::before {
+    content: '\2605';
+}
+
