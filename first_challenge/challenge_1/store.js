@@ -24,57 +24,48 @@ function select(element) {
     
 }
 
-/**
- *  Getting all the elements i need to add listeners to
- */
+//Getting all the elements i need to add listeners to
+let add_to_cart = document.getElementById('add_to_cart');
+let minus = document.getElementById('minus');
+let plus = document.getElementById('plus');
+let agree = document.getElementsByClassName('closeBtn')[0];
+let cancle = document.getElementsByClassName('closeBtn')[1];
 
- let add_to_cart = document.getElementById('add_to_cart');
- let minus = document.getElementById('minus');
- let plus = document.getElementById('plus');
- let agree = document.getElementsByClassName('closeBtn')[0];
- let cancle = document.getElementsByClassName('closeBtn')[1];
-
- /**
-  * elements of page
-  */
-
-  let modal = document.getElementById('popup');
-  let modalNumber = document.getElementById('count');
-  let totalNumber = document.getElementById('colourCount');
+//elements of page
+let modal = document.getElementById('popup');
+let modalNumber = document.getElementById('count');
+let totalNumber = document.getElementById('colourCount');
 
 
-  /**
-   * functions
-   */
+//functions
+add_to_cart.addEventListener('click', openModal);
+cancle.addEventListener('click', closeModal);
+agree.addEventListener('click', addToTotal);
+minus.addEventListener('click', minus_one);
+plus.addEventListener('click', add_one);
 
-   add_to_cart.addEventListener('click', openModal);
-   cancle.addEventListener('click', closeModal);
-   agree.addEventListener('click', addToTotal);
-   minus.addEventListener('click', minus_one);
-   plus.addEventListener('click', add_one);
+function openModal() {
+    modal.style.display = 'block';
+}
+function closeModal() {
+    modal.style.display = 'none';
+    modalNumber.textContent = '0';
+}
 
-   function openModal() {
-       modal.style.display = 'block';
-   }
-   function closeModal() {
-       modal.style.display = 'none';
-       modalNumber.textContent = '0';
-   }
-
-   function add_one() {
-        modalNumber.textContent = parseInt(modalNumber.textContent) + 1;
-   }
-   function minus_one() {
-       if (parseInt(modalNumber.textContent) > 0) {
-            modalNumber.textContent = parseInt(modalNumber.textContent) - 1;
-       }
-   }
-   function addToTotal() {
-        totalNumber.textContent = modalNumber.textContent;
-        add_to_cart.textContent = "Check out now";
-        modalNumber.textContent = '0';
-        modal.style.display = 'none';
-   }
+function add_one() {
+    modalNumber.textContent = parseInt(modalNumber.textContent) + 1;
+}
+function minus_one() {
+    if (parseInt(modalNumber.textContent) > 0) {
+        modalNumber.textContent = parseInt(modalNumber.textContent) - 1;
+    }
+}
+function addToTotal() {
+    totalNumber.textContent = modalNumber.textContent;
+    add_to_cart.textContent = "Check out now";
+    modalNumber.textContent = '0';
+    modal.style.display = 'none';
+}
 
 
 
