@@ -89,7 +89,7 @@ div {
 }
 
 .line {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 1px;
     width: 100%;
 }
@@ -106,9 +106,24 @@ div {
 }
 
 .down {
-    text-align: center;
     margin-top: 10%;
-    margin-inline-end: 15%;
+}
+
+#reviews {
+    position: fixed;
+    left: 150px;
+}
+
+#oldPrice {
+    position: relative;
+    left: 50px;
+    top: 5px;
+}
+
+#sale {
+    position: relative;
+    left: 110px;
+    top: 5px;
 }
 
 /* Modal stuff */
@@ -185,7 +200,7 @@ div {
     border: rgba(0, 0, 0, 0.2) solid 1px; 
 }
 
-#cancleBtn {
+#cancelBtn {
     background-color:lightcoral;
     width: 100px;
     border: rgba(0, 0, 0, 0.2) solid 1px;
@@ -193,11 +208,6 @@ div {
 
 
 /* Star stuff */
-.spaces {
-    margin-inline-end: 4%;
-    position: relative;
-    width: 15%;
-}
 
 .star {
     color: black;
