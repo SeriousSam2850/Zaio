@@ -1,0 +1,15 @@
+GET http://localhost:3000/listings
+
+###
+GET http://localhost:3000/listings/15
+
+###
+
+POST http://localhost:3000/listings
+Content-Type: application/json
+
+{
+    "name": "one",
+    "location": "here",
+    "price": 1
+}
