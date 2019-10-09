@@ -1,14 +1,28 @@
-GET http://localhost:3000/listings
+GET http://localhost:3000/properties
 
 ###
-GET http://localhost:3000/listings/15
+GET http://localhost:3000/properties/5d9e533671217730e7e65988
 
 ###
 
-POST http://localhost:3000/listings
+POST http://localhost:3000/properties
 Content-Type: application/json
 
 {
     "name": "one",
     "location": "here"
+}
+
+###
+
+DELETE http://localhost:3000/properties/5d9e533671217730e7e65988
+
+###
+
+PATCH http://localhost:3000/properties/5d9e566355be1a3265612503
+Content-Type:  application/json
+
+{
+    "name": "Two",
+    "imageUrl": "pictureURLhere"
 }

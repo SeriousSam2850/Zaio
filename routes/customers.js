@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const listing = require('../models/agent')
+const Customer = require('../models/agent')
 
 
 //Creating One
 router.post('/', async (req, res) => {
-    const customer = new customer({
+    const customer = new Customer({
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         email: req.body.email,
