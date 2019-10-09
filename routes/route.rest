@@ -10,6 +10,5 @@ Content-Type: application/json
 
 {
     "name": "one",
-    "location": "here",
-    "price": 1
+    "location": "here"
 }
