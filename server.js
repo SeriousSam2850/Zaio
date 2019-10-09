@@ -11,7 +11,14 @@ db.once('open', () => console.log('Connected to database'))
 
 app.use(express.json())
 
-const listingsRouter = require('./routes/listings.js' )
-app.use('/listings', listingsRouter)
+// Routers
+const propertiesRouter = require('./routes/properties.js' )
+const customersRouter = require('./routes/customers.js' )
+const agentsRouter = require('./routes/agents.js' )
+
+// Using the routers for specified paths
+app.use('/properties', propertiesRouter)
+app.use('/customers', customersRouter)
+app.use('/agents', agentsRouter)
 
 app.listen(3000, () => console.log('Server Started'))

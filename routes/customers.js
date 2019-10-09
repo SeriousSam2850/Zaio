@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const listing = require('../models/listing')
+const listing = require('../models/customer')
 
 //Gettings All
 router.get('/', async (req, res) => {
     try {
-        const listings = await listing.find()
-        res.json(listings)
+        const customers = await customer.find()
+        res.json(customers)
     } catch (err) {
         res.status(500).json({ message: err.message})
     }
@@ -19,15 +19,13 @@ router.get('/:id', (req, res) => {
 
 //Creating One
 router.post('/', async (req, res) => {
-    const property = new listing({
-        name: req.body.name,
-        location: req.body.location,
-        price: req.body.price
+    const customer = new customer({
+
     })
 
     try {
-        const newProperty = await property.save()
-        res.status(201).json(newProperty)
+        const newCustomer = await customer.save()
+        res.status(201).json(newCustomer)
     } catch (error) {
         res.status(400).json({ message: error.message})
     }
