@@ -6,7 +6,10 @@ const listing = require('../models/agent')
 //Creating One
 router.post('/', async (req, res) => {
     const agent = new agent({
-        
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        password: req.body.password
     })
 
     try {
