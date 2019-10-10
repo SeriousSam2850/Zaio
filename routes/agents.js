@@ -46,20 +46,20 @@ router.post('/', async (req, res) => {
         });
 })
 
-//Authentaction
-router.post('/authentaction', (req, res) => {
+//authentication
+router.post('/authentication', (req, res) => {
     Agent.find({ email: req.body.email })
         .exec()
         .then(agent => {
             if (agent.length < 1) {
                 return res.status(401).json({
-                    message: "Authentaction Failed"
+                    message: "authentication Failed"
                 });
             } else {
                 bcrypt.compare(req.body.password, agent[0].password, (err, result) => {
                     if (err) {
                         return res.status(401).json({
-                            message: "Authentaction Failed"
+                            message: "authentication Failed"
                         });
                     } else if (result) {
                         const token = jwt.sign(
@@ -73,12 +73,12 @@ router.post('/authentaction', (req, res) => {
                             }
                         );
                         return res.status(200).json({
-                            message: "Authentaction successful",
+                            message: "authentication successful",
                             token: token
                         });
                     } else {
                         return res.status(401).json({
-                            message: "Authentaction Failed"
+                            message: "authentication Failed"
                         });
                     }
                 })
