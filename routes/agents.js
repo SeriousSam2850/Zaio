@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
     Agent.find({email: req.body.email})
         .exec()
         .then(agent => {
-            if (agent) {
+            if (agent.length >= 1) {
                 return res.status(409).json({
                     message: "Mail exsits"
                 });
