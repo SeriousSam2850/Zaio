@@ -18,6 +18,18 @@ Content-Type: application/json
 }
 
 ###
+
+POST http://139.59.206.3:80/agents
+Content-Type: application/json
+
+{
+    "firstname": "first",
+    "lastname": "last",
+    "email": "test@this.com",
+    "password": "P@55"
+}
+
+###
 DELETE http://139.59.206.3:80/properties
 
 ###
