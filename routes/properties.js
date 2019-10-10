@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 })
 
 //Getting One
-router.get('/:id', getProperty, (req, res) => {
+router.get('/:id', checkAuth, getProperty, (req, res) => {
     res.json(res.property)
 })
 
@@ -37,7 +37,7 @@ router.post('/', checkAuth, async (req, res) => {
 })
 
 //Updating One
-router.patch('/:id', getProperty, async (req, res) => {
+router.patch('/:id', checkAuth, getProperty, async (req, res) => {
     if (req.body.name != null) {
         res.property.name = req.body.name
     }
@@ -60,7 +60,7 @@ router.patch('/:id', getProperty, async (req, res) => {
 })
 
 //Deleting One
-router.delete('/:id', getProperty, async (req, res) => {
+router.delete('/:id', checkAuth, getProperty, async (req, res) => {
     try {
         await res.property.remove()
         res.json({ message: 'Deleted Property'})

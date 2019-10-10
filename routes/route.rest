@@ -15,7 +15,8 @@ Content-Type: application/json
     "geo": {
         "lat": "20",
         "lng": "30"
-    }
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmNmM5ZDcwMWMxYjNhOWUwYWUyN2EiLCJpYXQiOjE1NzA3MzY1MTAsImV4cCI6MTU3MDc0MDExMH0.3GbWM4D-MHNuK-S_bZImIH3NvF2FF6MhTEKFhnU2kak"
 }
 
 ###
