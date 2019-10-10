@@ -25,6 +25,7 @@ router.get('/agent/:id', async (req, res) => {
 })
 
 //Getting One
+//router.get('/:id', checkAuth, getProperty, async (req, res) => {
 router.get('/:id', getProperty, async (req, res) => {
     //const customer = Customer.findById(req.userData.id);
     //console.log(customer);
@@ -32,6 +33,7 @@ router.get('/:id', getProperty, async (req, res) => {
 })
 
 //Creating One
+//router.post('/', checkAuth, async (req, res) => {
 router.post('/', async (req, res) => {
     const property = new Property({
         name: req.body.name,
@@ -51,6 +53,7 @@ router.post('/', async (req, res) => {
 })
 
 //Updating One
+//router.patch('/:id', checkAuth, getProperty, async (req, res) => {
 router.patch('/:id', getProperty, async (req, res) => {
     if (req.body.name != null) {
         res.property.name = req.body.name
@@ -74,6 +77,7 @@ router.patch('/:id', getProperty, async (req, res) => {
 })
 
 //Deleting One
+//router.delete('/:id', checkAuth, getProperty, async (req, res) => {
 router.delete('/:id', getProperty, async (req, res) => {
     try {
         await res.property.remove()
