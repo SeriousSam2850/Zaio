@@ -26,7 +26,7 @@ router.get('/agent/:id', async (req, res) => {
 
 //Getting One
 router.get('/:id', checkAuth, getProperty, async (req, res) => {
-    const customer = Customer.find({ _id: req.userData.id });
+    const customer = Customer.findById(req.userData.id);
     console.log(customer);
     res.json(res.property);
 })
