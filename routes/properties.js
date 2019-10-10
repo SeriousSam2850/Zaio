@@ -1,6 +1,7 @@
-const express = require('express')
-const router = express.Router()
-const Property = require('../models/property')
+const express = require('express');
+const router = express.Router();
+const Property = require('../models/property');
+const checkAuth = require('../middleware/check-auth');
 
 //Gettings All
 router.get('/', async (req, res) => {
@@ -18,7 +19,7 @@ router.get('/:id', getProperty, (req, res) => {
 })
 
 //Creating One
-router.post('/', async (req, res) => {
+router.post('/', checkAuth, async (req, res) => {
     const property = new Property({
         name: req.body.name,
         location: req.body.location,

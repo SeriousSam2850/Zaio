@@ -1,7 +1,8 @@
+//Properties
 GET http://139.59.206.3:80/properties
 
 ###
-GET http://139.59.206.3:80/properties/5d9efb39ed996a162e77e26e
+GET http://139.59.206.3:80/properties/5d9ee079c4e1a90f28361ae3
 
 ###
 
@@ -19,21 +20,6 @@ Content-Type: application/json
 
 ###
 
-POST http://139.59.206.3:80/agents
-Content-Type: application/json
-
-{
-    "firstname": "first",
-    "lastname": "last",
-    "email": "test@this.com",
-    "password": "P@55"
-}
-
-###
-DELETE http://139.59.206.3:80/properties
-
-###
-
 DELETE http://139.59.206.3:80/properties/5d9efc92ed996a162e77e273
 
 ###
@@ -46,3 +32,55 @@ Content-Type:  application/json
     "price": "5000",
     "imageUrl": "pictureURLhere"
 }
+
+//========================================================================
+//Agents
+
+###
+POST http://139.59.206.3:80/agents/authentaction
+Content-Type: application/json
+
+{
+    "email": "test1@this.com",
+    "password": "P@55"
+}
+###
+POST http://139.59.206.3:80/agents
+Content-Type: application/json
+
+{
+    "firstname": "first",
+    "lastname": "last",
+    "email": "test1@this.com",
+    "password": "P@55"
+}
+###
+GET http://139.59.206.3:80/agents
+###
+DELETE http://139.59.206.3:80/agents/5d9f696d8676ce39b2150915
+
+//========================================================================
+//Customers
+
+###
+POST http://139.59.206.3:80/customers/authentaction
+Content-Type: application/json
+
+{
+    "email": "test1@this.com",
+    "password": "P@55"
+}
+###
+POST http://139.59.206.3:80/customers
+Content-Type: application/json
+
+{
+    "firstname": "first",
+    "lastname": "last",
+    "email": "test1@this.com",
+    "password": "P@55"
+}
+###
+GET http://139.59.206.3:80/customers
+###
+DELETE http://139.59.206.3:80/customers/5d9f7506e2d3bd3c6c57037c
