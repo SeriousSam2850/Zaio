@@ -64,8 +64,8 @@ router.post('/authentaction', (req, res) => {
                     } else if (result) {
                         const token = jwt.sign(
                             {
-                            email: user[0].email,
-                            id: user[0]._id
+                            email: agent[0].email,
+                            id: agent[0]._id
                             }, 
                             process.env.JWT_KEY, 
                             {
