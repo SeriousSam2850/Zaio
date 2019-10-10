@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Agent = require('../models/agent')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 //Creating One
 router.post('/', async (req, res) => {
@@ -61,8 +62,19 @@ router.post('/authentaction', (req, res) => {
                             message: "Authentaction Failed"
                         });
                     } else if (result) {
+                        const token = jwt.sign(
+                            {
+                            email: user[0].email,
+                            id: user[0]._id
+                            }, 
+                            process.env.JWT_KEY, 
+                            {
+                                expiresIn: "1h"
+                            }
+                        );
                         return res.status(200).json({
-                            message: "Authentaction successful"
+                            message: "Authentaction successful",
+                            token: token
                         });
                     } else {
                         return res.status(401).json({
