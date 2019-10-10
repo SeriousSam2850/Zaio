@@ -1,29 +1,32 @@
-GET http://localhost:3000/properties
+GET http://139.59.206.3:80/properties
 
 ###
-GET http://localhost:3000/properties/5d9e566355be1a3265612503
+GET http://139.59.206.3:80/properties/5d9efb39ed996a162e77e26e
 
 ###
 
-POST http://localhost:3000/properties
+POST http://139.59.206.3:80/properties
 Content-Type: application/json
 
 {
     "name": "one",
     "location": "here",
-    "coords": {
-        "lat": "10",
-        "long": "20"
+    "geo": {
+        "lat": "20",
+        "lng": "30"
     }
 }
 
 ###
-
-DELETE http://localhost:3000/properties/5d9e533671217730e7e65988
+DELETE http://139.59.206.3:80/properties
 
 ###
 
-PATCH http://localhost:3000/properties/5d9e569455be1a3265612504
+DELETE http://139.59.206.3:80/properties/5d9efc92ed996a162e77e273
+
+###
+
+PATCH http://139.59.206.3:80/properties/5d9e569455be1a3265612504
 Content-Type:  application/json
 
 {

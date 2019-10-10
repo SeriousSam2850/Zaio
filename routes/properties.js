@@ -23,7 +23,8 @@ router.post('/', async (req, res) => {
         name: req.body.name,
         location: req.body.location,
         imageUrl: req.body.imageUrl,
-        price: req.body.price
+        price: req.body.price,
+        geo: req.body.geo
     })
 
     try {
@@ -66,6 +67,7 @@ router.delete('/:id', getProperty, async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 })
+
 
 async function getProperty(req, res, next) {
     let property
