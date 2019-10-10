@@ -17,13 +17,17 @@ class Listing extends Component {
                 })
             })
     }
+    handleClick = () => {
+        alert("Coming soon...")
+    }
     
     render() {
         const listing = this.state.listing ? (
             <div className="listing">
-                <p className="center">{"Name "+this.state.listing.name}</p>
+                <p>{"Name "+this.state.listing.name}</p>
                 <p>{"Location "+this.state.listing.location}</p>
                 <p>{"Price "+this.state.listing.price}</p>
+                <button onClick={this.handleClick} >View</button>
             </div>
         ) : (
             <div className="center">Loading listing...</div>

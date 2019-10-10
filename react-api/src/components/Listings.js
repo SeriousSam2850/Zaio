@@ -6,7 +6,7 @@ import {
     CardTitle, CardSubtitle, Button
   } from 'reactstrap';
 
-import Small from '../ay.png'
+import Small from '../smal.png'
 class Listings extends Component{
 
     state = {
