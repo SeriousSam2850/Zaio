@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Property = require('../models/property');
+const Customer = require('../models/customer');
 const checkAuth = require('../middleware/check-auth');
 
 //Gettings All
@@ -13,19 +14,32 @@ router.get('/', async (req, res) => {
     }
 })
 
+//Gettings All
+router.get('/agent/:id', async (req, res) => {
+    try {
+        const properties = await Property.find({ agentID: id })
+        res.json(properties)
+    } catch (err) {
+        res.status(500).json({ message: err.message})
+    }
+})
+
 //Getting One
-router.get('/:id', getProperty, (req, res) => {
-    res.json(res.property)
+router.get('/:id', checkAuth, getProperty, async (req, res) => {
+    const customer = Customer.find({ _id: req.userData.id });
+    console.log.json(customer[0]);
+    res.json(res.property);
 })
 
 //Creating One
-router.post('/', async (req, res) => {
+router.post('/', checkAuth, async (req, res) => {
     const property = new Property({
         name: req.body.name,
         location: req.body.location,
         imageUrl: req.body.imageUrl,
         price: req.body.price,
-        geo: req.body.geo
+        geo: req.body.geo,
+        agentID: req.userData._id
     })
 
     try {
@@ -37,7 +51,7 @@ router.post('/', async (req, res) => {
 })
 
 //Updating One
-router.patch('/:id', getProperty, async (req, res) => {
+router.patch('/:id', checkAuth, getProperty, async (req, res) => {
     if (req.body.name != null) {
         res.property.name = req.body.name
     }
@@ -60,7 +74,7 @@ router.patch('/:id', getProperty, async (req, res) => {
 })
 
 //Deleting One
-router.delete('/:id', getProperty, async (req, res) => {
+router.delete('/:id', checkAuth, getProperty, async (req, res) => {
     try {
         await res.property.remove()
         res.json({ message: 'Deleted Property'})
