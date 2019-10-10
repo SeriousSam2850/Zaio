@@ -45,6 +45,41 @@ router.post('/', async (req, res) => {
         });
 })
 
+//Authentaction
+router.post('/authentaction', (req, res) => {
+    Agent.find({ email: req.body.email })
+        .exec()
+        .then(agent => {
+            if (agent.length < 1) {
+                return res.status(401).json({
+                    message: "Authentaction Failed"
+                });
+            } else {
+                bcrypt.compare(req.body.password, agent[0].password, (err, result) => {
+                    if (err) {
+                        return res.status(401).json({
+                            message: "Authentaction Failed"
+                        });
+                    } else if (result) {
+                        return res.status(200).json({
+                            message: "Authentaction successful"
+                        });
+                    } else {
+                        return res.status(401).json({
+                            message: "Authentaction Failed"
+                        });
+                    }
+                })
+            }
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
+
 //Deleting One
 router.delete('/:id', getAgent, async (req, res) => {
     try {
