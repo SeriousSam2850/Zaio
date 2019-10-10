@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import Listings from './components/Listings'
-//import Listing from './components/Listing'
+import Listing from './components/Listing'
 import Navbar from './components/Navbar'
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import Home from './components/Home'
 import Register from './components/Register'
 import Login from './components/Login'
+import LoginScreen from './components/Loginscreen';
 
 import axios from 'axios';
 //<Listings listings={this.state.listings} />
@@ -17,7 +18,7 @@ class App extends Component {
     };
     
     componentDidMount() {
-        axios.get("http://localhost:3000/listings")
+        axios.get("http://139.59.206.3/properties")
         .then(response => response.data)
             .then((data) => {
                 this.setState({ listings: data })
@@ -32,9 +33,10 @@ class App extends Component {
                 <Navbar />
                 <Switch>
                     <Route exact path='/' component={Home}/>
-                    <Route path='/login' component={Login} />
+                    <Route path='/login' component={LoginScreen} />
                     <Route path='/register' component={Register} />
                     <Route path="/listings" component={Listings} />
+                    <Route path="/:listing_id" component={Listing} />
                 </Switch>
                 </div>
             </BrowserRouter>

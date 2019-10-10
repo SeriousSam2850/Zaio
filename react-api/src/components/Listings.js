@@ -1,6 +1,12 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
 
+import Small from '../ay.png'
 class Listings extends Component{
 
     state = {
@@ -8,7 +14,7 @@ class Listings extends Component{
     }
     
     componentDidMount() {
-        axios.get("http://localhost:3000/listings")
+        axios.get("http://139.59.206.3/properties")
         .then(response => response.data)
             .then((data) => {
                 this.setState({ listings: data })
@@ -18,15 +24,17 @@ class Listings extends Component{
     render () {
     return (
         <div>
-            <center><h1>Current listings</h1></center>
+        <center><h1>Current listings</h1></center>
             {this.state.listings.map((listing) => (
-                <div className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">{listing.name}</h5>
-                        <h6 className="card-subtitle mb-2 text-muted">{listing.location}</h6>
-                        <p className="card-text">{listing.price}</p>
-                    </div>
-                </div>
+            <Card>
+            <CardImg  style={{width : '10%'}}  src={Small} alt="Card image cap" />
+                <CardBody>
+                    <CardTitle>{listing.name}</CardTitle>
+                    <Link to={'/' + listing._id}>
+                        <Button>View</Button>
+                    </Link>
+                </CardBody>
+            </Card>
             ))}
         </div>
     )
