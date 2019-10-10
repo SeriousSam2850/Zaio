@@ -6,7 +6,7 @@ GET http://139.59.206.3:80/properties/5d9ee079c4e1a90f28361ae3
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmNmM5ZDcwMWMxYjNhOWUwYWUyN2EiLCJpYXQiOjE1NzA3MzY1MTAsImV4cCI6MTU3MDc0MDExMH0.3GbWM4D-MHNuK-S_bZImIH3NvF2FF6MhTEKFhnU2kak"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmNzUyMWUyZDNiZDNjNmM1NzAzN2QiLCJpYXQiOjE1NzA3NDE2MTksImV4cCI6MTU3MDc0NTIxOX0.QqzkG4ungOPY0gMmhkVIo1b9QHHWU0zWw8aeQzt2qJ8"
 }
 
 ###
@@ -21,7 +21,7 @@ Content-Type: application/json
         "lat": "20",
         "lng": "30"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmNmM5ZDcwMWMxYjNhOWUwYWUyN2EiLCJpYXQiOjE1NzA3MzY1MTAsImV4cCI6MTU3MDc0MDExMH0.3GbWM4D-MHNuK-S_bZImIH3NvF2FF6MhTEKFhnU2kak"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmNzUyMWUyZDNiZDNjNmM1NzAzN2QiLCJpYXQiOjE1NzA3NDE2MTksImV4cCI6MTU3MDc0NTIxOX0.QqzkG4ungOPY0gMmhkVIo1b9QHHWU0zWw8aeQzt2qJ8"
 }
 
 ###
@@ -37,14 +37,14 @@ Content-Type:  application/json
     "name": "Four",
     "price": "5000",
     "imageUrl": "pictureURLhere",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmNmM5ZDcwMWMxYjNhOWUwYWUyN2EiLCJpYXQiOjE1NzA3MzY1MTAsImV4cCI6MTU3MDc0MDExMH0.3GbWM4D-MHNuK-S_bZImIH3NvF2FF6MhTEKFhnU2"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmNzUyMWUyZDNiZDNjNmM1NzAzN2QiLCJpYXQiOjE1NzA3NDE2MTksImV4cCI6MTU3MDc0NTIxOX0.QqzkG4ungOPY0gMmhkVIo1b9QHHWU0zWw8aeQzt2qJ8"
 }
 
 //========================================================================
 //Agents
 
 ###
-POST http://139.59.206.3:80/agents/authentaction
+POST http://139.59.206.3:80/agents/authentication
 Content-Type: application/json
 
 {
@@ -70,7 +70,7 @@ DELETE http://139.59.206.3:80/agents/5d9f696d8676ce39b2150915
 //Customers
 
 ###
-POST http://139.59.206.3:80/customers/authentaction
+POST http://139.59.206.3:80/customers/authentication
 Content-Type: application/json
 
 {

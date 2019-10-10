@@ -2,23 +2,19 @@ const mongoose = require('mongoose')
 
 const propertySchema = new mongoose.Schema({
     name: {
-        type: String,
-        required: true
+        type: String
     },
     location: {
-        type: String,
-        required: true
+        type: String
     },
     imageUrl: {
         type: String
     },
     price: {
-        type: String,
-        required: true
+        type: String
     },
     agentID: {
-        type: String,
-        required: true
+        type: String
     },
     geo: {
         type: Object,
