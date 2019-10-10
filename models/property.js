@@ -12,6 +12,15 @@ const propertySchema = new mongoose.Schema({
     },
     price: {
         type: String
+    },
+    geo: {
+        type: Object,
+        lat: {
+            type: String
+        },
+        long: {
+            type: String
+        }
     }
 })
 

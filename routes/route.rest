@@ -1,7 +1,7 @@
 GET http://localhost:3000/properties
 
 ###
-GET http://localhost:3000/properties/5d9e533671217730e7e65988
+GET http://localhost:3000/properties/5d9e566355be1a3265612503
 
 ###
 
@@ -10,7 +10,11 @@ Content-Type: application/json
 
 {
     "name": "one",
-    "location": "here"
+    "location": "here",
+    "coords": {
+        "lat": "10",
+        "long": "20"
+    }
 }
 
 ###
@@ -19,10 +23,11 @@ DELETE http://localhost:3000/properties/5d9e533671217730e7e65988
 
 ###
 
-PATCH http://localhost:3000/properties/5d9e566355be1a3265612503
+PATCH http://localhost:3000/properties/5d9e569455be1a3265612504
 Content-Type:  application/json
 
 {
-    "name": "Two",
+    "name": "Three",
+    "price": "5000",
     "imageUrl": "pictureURLhere"
 }
