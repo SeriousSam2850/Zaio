@@ -6,7 +6,7 @@ GET https://139.59.206.3:80/properties/5d9ee079c4e1a90f28361ae3
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDAzNTUsImV4cCI6MTU3MDgzNjM1NX0.9l3_gAvv3TcSjhmgx1vVt5SjZPWZE7123DcmZVBruYI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDE5NDksImV4cCI6MTU3MDgzNzk0OX0.HQyNcMMDDPErLO7WCj7-8cY9Cr_-Nnj9_c0dt4a-u7E"
 }
 
 ###
@@ -18,16 +18,16 @@ Content-Type: application/json
     "name": "one",
     "location": "here",
     "price": "50",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDAzNTUsImV4cCI6MTU3MDgzNjM1NX0.9l3_gAvv3TcSjhmgx1vVt5SjZPWZE7123DcmZVBruYI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDE5NDksImV4cCI6MTU3MDgzNzk0OX0.HQyNcMMDDPErLO7WCj7-8cY9Cr_-Nnj9_c0dt4a-u7E"
 }
 
 ###
 
-DELETE https://139.59.206.3:80/properties/5da082f6e800982bdc44f712
+DELETE https://139.59.206.3:80/properties/5da088a200b49c2dded09440
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDAzNTUsImV4cCI6MTU3MDgzNjM1NX0.9l3_gAvv3TcSjhmgx1vVt5SjZPWZE7123DcmZVBruYI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDE5NDksImV4cCI6MTU3MDgzNzk0OX0.HQyNcMMDDPErLO7WCj7-8cY9Cr_-Nnj9_c0dt4a-u7E"
 }
 
 ###
@@ -39,7 +39,7 @@ Content-Type:  application/json
     "name": "Four",
     "price": "5000",
     "imageUrl": "pictureURLhere",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmNzUyMWUyZDNiZDNjNmM1NzAzN2QiLCJpYXQiOjE1NzA3NDE2MTksImV4cCI6MTU3MDc0NTIxOX0.QqzkG4ungOPY0gMmhkVIo1b9QHHWU0zWw8aeQzt2qJ8"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDE5NDksImV4cCI6MTU3MDgzNzk0OX0.HQyNcMMDDPErLO7WCj7-8cY9Cr_-Nnj9_c0dt4a-u7E"
 }
 
 //========================================================================
