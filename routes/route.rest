@@ -17,16 +17,18 @@ Content-Type: application/json
 {
     "name": "one",
     "location": "here",
-    "geo": {
-        "lat": "20",
-        "lng": "30"
-    },
+    "price": "50",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDAzNTUsImV4cCI6MTU3MDgzNjM1NX0.9l3_gAvv3TcSjhmgx1vVt5SjZPWZE7123DcmZVBruYI"
 }
 
 ###
 
-DELETE https://139.59.206.3:80/properties/5d9fab88969d7d45f851a71f
+DELETE https://139.59.206.3:80/properties/5da082f6e800982bdc44f712
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDAzNTUsImV4cCI6MTU3MDgzNjM1NX0.9l3_gAvv3TcSjhmgx1vVt5SjZPWZE7123DcmZVBruYI"
+}
 
 ###
 
