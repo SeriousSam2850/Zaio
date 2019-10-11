@@ -10,6 +10,14 @@ Content-Type: application/json
 }
 
 ###
+GET https://139.59.206.3:80/properties/agent/5da082e0e800982bdc44f711
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZGEwODJlMGU4MDA5ODJiZGM0NGY3MTEiLCJpYXQiOjE1NzA4MDE5NDksImV4cCI6MTU3MDgzNzk0OX0.HQyNcMMDDPErLO7WCj7-8cY9Cr_-Nnj9_c0dt4a-u7E"
+}
+
+###
 
 POST https://139.59.206.3:80/properties
 Content-Type: application/json
@@ -23,7 +31,7 @@ Content-Type: application/json
 
 ###
 
-DELETE https://139.59.206.3:80/properties/5da088a200b49c2dded09440
+DELETE https://139.59.206.3:80/properties/5da08a15c9b2b12e5d6f31e6
 Content-Type: application/json
 
 {

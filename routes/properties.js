@@ -14,10 +14,10 @@ router.get('/', async (req, res) => {
     }
 })
 
-//Gettings All
+//Gettings All of an agent
 router.get('/agent/:id', async (req, res) => {
     try {
-        const properties = await Property.find({ agentID: id })
+        const properties = await Property.find({ agentID: req.id })
         res.json(properties)
     } catch (err) {
         res.status(500).json({ message: err.message})
