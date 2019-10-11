@@ -41,7 +41,7 @@ router.post('/', checkAuth, async (req, res) => {
         imageUrl: req.body.imageUrl,
         price: req.body.price,
         geo: req.body.geo,
-        agentID: req.body.userData._id
+        agentID: req.userData._id
     })
 
     try {
