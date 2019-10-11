@@ -16,7 +16,7 @@ const propertySchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    agentID: {
+    agentEmail: {
         type: String,
         required: true
     },

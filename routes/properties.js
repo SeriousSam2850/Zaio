@@ -15,10 +15,11 @@ router.get('/', async (req, res) => {
 })
 
 //Gettings All of an agent
-router.get('/agent/:id', async (req, res) => {
+router.get('/agent/:email', async (req, res) => {
     try {
-        const properties = await Property.find({ agentID: req.params.id });
-        console.log(req.params.id);
+        const properties = await Property.find({
+            agentEmail: req.params.email
+        });
         res.json(properties);
     } catch (err) {
         res.status(500).json({ message: err.message})
@@ -42,7 +43,7 @@ router.post('/', checkAuth, async (req, res) => {
         imageUrl: req.body.imageUrl,
         price: req.body.price,
         geo: req.body.geo,
-        agentID: req.userData.id
+        agentEmail: req.userData.email
     })
 
     try {
