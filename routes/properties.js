@@ -17,8 +17,8 @@ router.get('/', async (req, res) => {
 //Gettings All of an agent
 router.get('/agent/:id', async (req, res) => {
     try {
-        const properties = await Property.find({ agentID: req.id });
-        console.log(req.id);
+        const properties = await Property.find({ agentID: req.params.id });
+        console.log(req.params.id);
         res.json(properties);
     } catch (err) {
         res.status(500).json({ message: err.message})
