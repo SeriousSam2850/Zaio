@@ -17,8 +17,7 @@ const propertySchema = new mongoose.Schema({
         required: true
     },
     agentID: {
-        type: String,
-        required: true
+        type: String
     },
     geo: {
         type: Object,
