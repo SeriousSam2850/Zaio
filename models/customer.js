@@ -22,6 +22,9 @@ const userSchema = new mongoose.Schema({
         required: true,
         default: 0
     },
+    lastViewed: {
+        type: Number
+    },
     agent: {
         type: Boolean,
         required: true,

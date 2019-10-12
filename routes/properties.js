@@ -31,14 +31,24 @@ router.get('/:id', checkAuth, getProperty, async (req, res) => {
     if (!req.userData.agent) {//avals to false for agent true for customer
         const customer = await Customer.findById(req.userData.id);
         if (customer != null) {
-            console.log(customer);
-            customer.count = customer.count + 1;
-            const upDatedCustomer = await customer.save();
-            console.log(upDatedCustomer);
+            let d = new Date();
+            if (customer.count == 4) {
+                if ((d.getMinutes - customer.lastViewed) > 60) {
+                    customer.count = 1;
+                    customer.lastViewed = d.getMinutes;
+                    await customer.save();
+                } else {
+                    return res.status(401).json({ message: "Sorry no more views, wait a while" });
+                };
+            } else {
+                customer.count = customer.count + 1;
+                customer.lastViewed = d.getMinutes();
+                const upDatedCustomer = await customer.save();
+                console.log(upDatedCustomer);
+            };
         } else {
             return res.status(404).json({ message: "Cannot find customer" });
         }
-        
     }
     res.json(res.property);
 })

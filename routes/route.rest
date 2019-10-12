@@ -5,7 +5,7 @@ GET https://178.62.11.46:21880/properties/5da22324d3ecfd0980806780
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5MDk3NzIsImV4cCI6MTU3MDk0NTc3Mn0.CcuTeAKm9JgbzcEwEZDOxnJmMj5h_gMNfS7aA--5KfE"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmYjRmYTYwNGE4YzQ4NGJkYmVhZmEiLCJhZ2VudCI6ZmFsc2UsImlhdCI6MTU3MDkxMzEwMywiZXhwIjoxNTcwOTIwMzAzfQ.SB7aYEXUyDuH_CWa15nX49DikVOSAfjb3aixbdlas4A"
 }
 
 ###
