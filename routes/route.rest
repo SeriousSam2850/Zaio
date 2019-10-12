@@ -5,7 +5,7 @@ GET https://178.62.11.46:21880/properties/5da22324d3ecfd0980806780
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNjg4NywiZXhwIjoxNTcwOTQyODg3fQ.-tw31yMOIl8s4ty1dtN22E86AqG_rH6oR9wpn-3PumI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5MDk3NzIsImV4cCI6MTU3MDk0NTc3Mn0.CcuTeAKm9JgbzcEwEZDOxnJmMj5h_gMNfS7aA--5KfE"
 }
 
 ###
@@ -13,7 +13,7 @@ GET https://178.62.11.46:21880/properties
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNjg4NywiZXhwIjoxNTcwOTQyODg3fQ.-tw31yMOIl8s4ty1dtN22E86AqG_rH6oR9wpn-3PumI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5MDk3NzIsImV4cCI6MTU3MDk0NTc3Mn0.CcuTeAKm9JgbzcEwEZDOxnJmMj5h_gMNfS7aA--5KfE"
 }
 
 ###
@@ -29,7 +29,7 @@ Content-Type: application/json
         "lat": "20",
         "lng": "30"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNjg4NywiZXhwIjoxNTcwOTQyODg3fQ.-tw31yMOIl8s4ty1dtN22E86AqG_rH6oR9wpn-3PumI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxQHRoaXMuY29tIiwiaWQiOiI1ZDlmYjRmYTYwNGE4YzQ4NGJkYmVhZmEiLCJpYXQiOjE1NzA5MTA4MDQsImV4cCI6MTU3MDkxNDQwNH0.r6D0ZYPgSmppIeQsYImr-kLX1fwJMmRuooME3oFlOvg"
 }
 
 ###
@@ -38,19 +38,19 @@ DELETE https://178.62.11.46:21880/properties/5da21d66a8dcd1014b7d2783
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNjg4NywiZXhwIjoxNTcwOTQyODg3fQ.-tw31yMOIl8s4ty1dtN22E86AqG_rH6oR9wpn-3PumI"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5MDk3NzIsImV4cCI6MTU3MDk0NTc3Mn0.CcuTeAKm9JgbzcEwEZDOxnJmMj5h_gMNfS7aA--5KfE"
 }
 
 ###
 
-PATCH https://178.62.11.46:21880/properties/5da22324d3ecfd0980806780
+PATCH https://178.62.11.46:21880/properties/5da21d66a8dcd1014b7d2783
 Content-Type:  application/json
 
 {
     "name": "Four",
     "price": "5000",
     "imageUrl": "pictureURLhere",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNDc4MCwiZXhwIjoxNTcwOTQwNzgwfQ.MS1ZTC0IhHjBjZEbSlgESgFOCsWITpC1TMLJGvkVApM"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5MDk3NzIsImV4cCI6MTU3MDk0NTc3Mn0.CcuTeAKm9JgbzcEwEZDOxnJmMj5h_gMNfS7aA--5KfE"
 }
 
 //========================================================================

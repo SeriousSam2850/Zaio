@@ -64,12 +64,13 @@ router.post('/authentication', (req, res) => {
                     } else if (result) {
                         const token = jwt.sign(
                             {
-                            email: customer[0].email,
-                            id: customer[0]._id
+                                email: customer[0].email,
+                                id: customer[0]._id,
+                                agent: customer[0].agent
                             }, 
                             process.env.JWT_KEY, 
                             {
-                                expiresIn: "1h"
+                                expiresIn: "2h"
                             }
                         );
                         return res.status(200).json({

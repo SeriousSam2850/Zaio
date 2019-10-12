@@ -28,6 +28,12 @@ router.get('/agent/:email', checkAuth, async (req, res) => {
 
 //Getting One
 router.get('/:id', checkAuth, getProperty, async (req, res) => {
+    if (!req.userData.agent) {//avals to false for agent true for customer
+        let customer = Customer.findById(req.userData.id);
+        customer.body.count = customer.body.count + 1;
+        let upDatedCustomer = await customer.save();
+        console.log(upDatedCustomer);
+    }
     res.json(res.property);
 })
 

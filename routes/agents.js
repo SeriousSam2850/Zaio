@@ -70,7 +70,7 @@ router.post('/authentication', (req, res) => {
                             }, 
                             process.env.JWT_KEY, 
                             {
-                                expiresIn: "10h"
+                                expiresIn: "2h"
                             }
                         );
                         return res.status(200).json({
