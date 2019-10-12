@@ -30,9 +30,15 @@ router.get('/agent/:email', checkAuth, async (req, res) => {
 router.get('/:id', checkAuth, getProperty, async (req, res) => {
     if (!req.userData.agent) {//avals to false for agent true for customer
         let customer = Customer.findById(req.userData.id);
-        customer[0].body.count = customer[0].body.count + 1;
-        let upDatedCustomer = await customer.save();
-        console.log(upDatedCustomer);
+        if (customer != null) {
+            console.log(customer);
+            customer[0].body.count = customer[0].body.count + 1;
+            let upDatedCustomer = await customer.save();
+            console.log(upDatedCustomer);
+        } else {
+            return res.status(404).json({ message: "Cannot find customer" });
+        }
+        
     }
     res.json(res.property);
 })
