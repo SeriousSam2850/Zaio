@@ -1,8 +1,16 @@
-require('dotenv').config()
+require('dotenv').config();
 
-const express = require('express')
-const app = express()
-const mongoose = require('mongoose')
+const port = 21800;
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const https = require("https");
+const fs = require("fs");
+
+const options = {
+  key: fs.readFileSync("/root/Zaio/client-key.pem"),
+  cert: fs.readFileSync("/root/Zaio/client-cert.pem")
+};
 
 mongoose.connect(process.env.DATABASE_URL, { useUnifiedTopology: true, useNewUrlParser: true })
 const db = mongoose.connection
@@ -27,4 +35,6 @@ app.use('/properties', propertiesRouter)
 app.use('/customers', customersRouter)
 app.use('/agents', agentsRouter)
 
-app.listen(80, () => console.log('Server Started'))
+
+
+https.createServer(options, app).listen(21880);
