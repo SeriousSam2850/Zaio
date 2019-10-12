@@ -32,17 +32,19 @@ router.get('/:id', checkAuth, getProperty, async (req, res) => {
         const customer = await Customer.findById(req.userData.id);
         if (customer != null) {
             let d = new Date();
+            let millie = d.getTime();
+            let mins = Math.floor((millie / (1000 * 60)) % 60);
             if (customer.count == 4) {
-                if ((d.getTime() - customer.lastViewed) > 60) {
+                if ((mins - customer.lastViewed) > 60) {
                     customer.count = 1;
-                    customer.lastViewed = d.getTime();
+                    customer.lastViewed = mins;
                     await customer.save();
                 } else {
                     return res.status(401).json({ message: "Sorry no more views, wait a while" });
                 };
             } else {
                 customer.count = customer.count + 1;
-                customer.lastViewed = d.getTime();
+                customer.lastViewed = mins;
                 const upDatedCustomer = await customer.save();
                 console.log(upDatedCustomer);
             };
