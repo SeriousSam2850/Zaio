@@ -1,12 +1,19 @@
 //Properties
-GET https://178.62.11.46:21880/properties
 
 ###
-GET https://178.62.11.46:21880/properties/5d9ee3408d50f011cdc92f14
+GET https://178.62.11.46:21880/properties/5da22324d3ecfd0980806780
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNDc4MCwiZXhwIjoxNTcwOTQwNzgwfQ.MS1ZTC0IhHjBjZEbSlgESgFOCsWITpC1TMLJGvkVApM"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNjg4NywiZXhwIjoxNTcwOTQyODg3fQ.-tw31yMOIl8s4ty1dtN22E86AqG_rH6oR9wpn-3PumI"
+}
+
+###
+GET https://178.62.11.46:21880/properties
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNjg4NywiZXhwIjoxNTcwOTQyODg3fQ.-tw31yMOIl8s4ty1dtN22E86AqG_rH6oR9wpn-3PumI"
 }
 
 ###
@@ -22,28 +29,21 @@ Content-Type: application/json
         "lat": "20",
         "lng": "30"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNDc4MCwiZXhwIjoxNTcwOTQwNzgwfQ.MS1ZTC0IhHjBjZEbSlgESgFOCsWITpC1TMLJGvkVApM"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNjg4NywiZXhwIjoxNTcwOTQyODg3fQ.-tw31yMOIl8s4ty1dtN22E86AqG_rH6oR9wpn-3PumI"
 }
 
 ###
 
-DELETE https://178.62.11.46:21880/properties/5d9f89a032a66e4096299571
+DELETE https://178.62.11.46:21880/properties/5da21d66a8dcd1014b7d2783
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNDc4MCwiZXhwIjoxNTcwOTQwNzgwfQ.MS1ZTC0IhHjBjZEbSlgESgFOCsWITpC1TMLJGvkVApM"
-}
-###
-GET https://178.62.11.46:21880/properties
-Content-Type: application/json
-
-{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNDc4MCwiZXhwIjoxNTcwOTQwNzgwfQ.MS1ZTC0IhHjBjZEbSlgESgFOCsWITpC1TMLJGvkVApM"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImlhdCI6MTU3MDkwNjg4NywiZXhwIjoxNTcwOTQyODg3fQ.-tw31yMOIl8s4ty1dtN22E86AqG_rH6oR9wpn-3PumI"
 }
 
 ###
 
-PATCH https://178.62.11.46:21880/properties/5da21d66a8dcd1014b7d2783
+PATCH https://178.62.11.46:21880/properties/5da22324d3ecfd0980806780
 Content-Type:  application/json
 
 {
@@ -66,14 +66,14 @@ Content-Type: application/json
 }
 
 ###
-POST https://178.62.11.46:21880/agents
+POST http://178.62.11.46:21870/agents
 Content-Type: application/json
 
 {
-    "firstname": "Justin",
-    "lastname": "Abrams",
-    "email": "justin.abrams@hotmail.com",
-    "password": "P@ssw0rd!@#"
+    "firstname": "1",
+    "lastname": "1",
+    "email": "one@1mail.com",
+    "password": "one"
 }
 
 ###

@@ -52,7 +52,7 @@ router.post('/', checkAuth, async (req, res) => {
 
 //Updating One
 router.patch('/:id', checkAuth, getProperty, async (req, res) => {
-    if (res.property.agentEmail != req.userData.agentEmail) {
+    if (res.property.agentEmail != req.userData.email) {
         return res.status(401).json({ message: "Not Your Property" })
     } else {
         if (req.body.name != null) {
@@ -82,7 +82,7 @@ router.patch('/:id', checkAuth, getProperty, async (req, res) => {
 
 //Deleting One
 router.delete('/:id', checkAuth, getProperty, async (req, res) => {
-    if (res.property.agentEmail != req.userData.agentEmail) {
+    if (res.property.agentEmail != req.userData.email) {
         return res.status(401).json({ message: "Not Your Property" });
     } else {
         try {
