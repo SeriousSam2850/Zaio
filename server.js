@@ -35,4 +35,6 @@ app.use('/properties', propertiesRouter)
 app.use('/customers', customersRouter)
 app.use('/agents', agentsRouter)
 
+app.listen(21870, () => console.log("Unsecure server"));
+
 https.createServer(options, app).listen(21880, () => console.log("Server Started"));
