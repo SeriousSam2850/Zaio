@@ -27,4 +27,4 @@ app.use('/properties', propertiesRouter)
 app.use('/customers', customersRouter)
 app.use('/agents', agentsRouter)
 
-app.listen(80, () => console.log('Server Started'))
+app.listen(3000, () => console.log('Server Started'))
