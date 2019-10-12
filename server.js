@@ -35,4 +35,4 @@ app.use('/properties', propertiesRouter)
 app.use('/customers', customersRouter)
 app.use('/agents', agentsRouter)
 
-https.createServer(options, app).listen(21880);
+https.createServer(options, app).listen(21880, () => console.log("Server Started"));

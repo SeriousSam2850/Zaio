@@ -5,7 +5,7 @@ const Customer = require('../models/customer');
 const checkAuth = require('../middleware/check-auth');
 
 //Gettings All
-router.get('/', async (req, res) => {
+router.get('/', checkAuth, async (req, res) => {
     try {
         const properties = await Property.find()
         res.json(properties)
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 })
 
 //Gettings All of an agent
-router.get('/agent/:email', async (req, res) => {
+router.get('/agent/:email', checkAuth, async (req, res) => {
     try {
         const properties = await Property.find({
             agentEmail: req.params.email
@@ -28,15 +28,11 @@ router.get('/agent/:email', async (req, res) => {
 
 //Getting One
 router.get('/:id', checkAuth, getProperty, async (req, res) => {
-//router.get('/:id', getProperty, async (req, res) => {
-    //const customer = Customer.findById(req.userData.id);
-    //console.log(customer);
     res.json(res.property);
 })
 
 //Creating One
 router.post('/', checkAuth, async (req, res) => {
-//router.post('/', async (req, res) => {
     const property = new Property({
         name: req.body.name,
         location: req.body.location,
@@ -56,37 +52,46 @@ router.post('/', checkAuth, async (req, res) => {
 
 //Updating One
 router.patch('/:id', checkAuth, getProperty, async (req, res) => {
-//router.patch('/:id', getProperty, async (req, res) => {
-    if (req.body.name != null) {
-        res.property.name = req.body.name
-    }
-    if (req.body.location != null) {
-        res.property.location = req.body.location
-    }
-    if (req.body.imageUrl != null) {
-        res.property.imageUrl = req.body.imageUrl
-    }
-    if (req.body.price != null) {
-        res.property.price = req.body.price
-    }
-
-    try {
-        const updatedProperty = await res.property.save()
-        res.status(201).json(updatedProperty)
-    } catch (error) {
-        res.status(400).json({ message: error.message})
-    }
+    if (res.property.agentEmail != req.userData.agentEmail) {
+        return res.status(401).json({ message: "Not Your Property" })
+    } else {
+        if (req.body.name != null) {
+            res.property.name = req.body.name;
+        };
+        if (req.body.location != null) {
+            res.property.location = req.body.location;
+        };
+        if (req.body.imageUrl != null) {
+            res.property.imageUrl = req.body.imageUrl;
+        };
+        if (req.body.price != null) {
+            res.property.price = req.body.price;
+        };
+        if (req.body.geo != null) {
+            res.property.geo = req.body.geo;
+        };
+    
+        try {
+            const updatedProperty = await res.property.save();
+            res.status(201).json(updatedProperty);
+        } catch (error) {
+            res.status(400).json({ message: error.message});
+        };
+    };
 })
 
 //Deleting One
 router.delete('/:id', checkAuth, getProperty, async (req, res) => {
-//router.delete('/:id', getProperty, async (req, res) => {
-    try {
-        await res.property.remove()
-        res.json({ message: 'Deleted Property'})
-    } catch (error) {
-        res.status(500).json({ message: error.message })
-    }
+    if (res.property.agentEmail != req.userData.agentEmail) {
+        return res.status(401).json({ message: "Not Your Property" });
+    } else {
+        try {
+            await res.property.remove();
+            res.json({ message: 'Deleted Property'});
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        };
+    };
 })
 
 
