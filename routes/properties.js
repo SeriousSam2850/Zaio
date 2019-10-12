@@ -33,22 +33,26 @@ router.get('/:id', checkAuth, getProperty, async (req, res) => {
 
 //Creating One
 router.post('/', checkAuth, async (req, res) => {
-    const property = new Property({
-        name: req.body.name,
-        location: req.body.location,
-        imageUrl: req.body.imageUrl,
-        price: req.body.price,
-        geo: req.body.geo,
-        agentEmail: req.userData.email
-    })
-
-    try {
-        const newProperty = await property.save()
-        res.status(201).json(newProperty)
-    } catch (error) {
-        res.status(400).json({ message: error.message})
-    }
-})
+    if (req.userData.agent) { //True or false value if agent or not
+        const property = new Property({
+            name: req.body.name,
+            location: req.body.location,
+            imageUrl: req.body.imageUrl,
+            price: req.body.price,
+            geo: req.body.geo,
+            agentEmail: req.userData.email
+        });
+    
+        try {
+            const newProperty = await property.save();
+            res.status(201).json(newProperty);
+        } catch (error) {
+            res.status(400).json({ message: error.message});
+        };
+    } else {
+        return res.status(401).json({ message: "You're Not an agent" });
+    }; 
+});
 
 //Updating One
 router.patch('/:id', checkAuth, getProperty, async (req, res) => {
