@@ -30,7 +30,7 @@ router.get('/agent/:email', checkAuth, async (req, res) => {
 router.get('/:id', checkAuth, getProperty, async (req, res) => {
     if (!req.userData.agent) {//avals to false for agent true for customer
         let customer = Customer.findById(req.userData.id);
-        customer.body.count = customer.body.count + 1;
+        customer[0].body.count = customer[0].body.count + 1;
         let upDatedCustomer = await customer.save();
         console.log(upDatedCustomer);
     }
