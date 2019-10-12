@@ -32,7 +32,7 @@ router.get('/:id', checkAuth, getProperty, async (req, res) => {
         const customer = await Customer.findById(req.userData.id);
         if (customer != null) {
             console.log(customer);
-            customer.body.count = customer.body.count + 1;
+            customer.count = customer.count + 1;
             const upDatedCustomer = await customer.save();
             console.log(upDatedCustomer);
         } else {
