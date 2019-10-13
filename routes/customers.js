@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
                                         email: req.body.email,
                                         firstname: req.body.firstname,
                                         lastname: req.body.lastname,
-                                        agent: true
+                                        agent: false
                                     }, 
                                     process.env.JWT_KEY, 
                                     {
