@@ -15,6 +15,16 @@ router.get('/', checkAuth, async (req, res) => {
     }
 })
 
+//Gettings All
+router.post('/get', checkAuth, async (req, res) => {
+    try {
+        const properties = await Property.find()
+        res.json(properties)
+    } catch (err) {
+        res.status(500).json({ message: err.message})
+    }
+})
+
 //Gettings All of an agent
 router.get('/agent/:email', checkAuth, async (req, res) => {
     try {
@@ -27,8 +37,50 @@ router.get('/agent/:email', checkAuth, async (req, res) => {
     }
 })
 
+//Gettings All of an agent
+router.post('/get/agent/:email', checkAuth, async (req, res) => {
+    try {
+        const properties = await Property.find({
+            agentEmail: req.params.email
+        });
+        res.json(properties);
+    } catch (err) {
+        res.status(500).json({ message: err.message})
+    }
+})
+
 //Getting One
 router.get('/:id', checkAuth, getProperty, async (req, res) => {
+    if (!req.userData.agent) {//avals to false for agent true for customer
+        const customer = await Customer.findById(req.userData.id);
+        if (customer != null) {
+            let d = new Date();
+            let days = d.getDay();
+            let hours = d.getHours() + days * 24;
+            let mins = d.getMinutes() + hours * 60;
+            if (customer.count == 4) {
+                if ((mins - customer.lastViewed) > 60) {
+                    customer.count = 1;
+                    customer.lastViewed = mins;
+                    await customer.save();
+                } else {
+                    return res.status(401).json({ message: "Sorry no more views, wait a while" });
+                };
+            } else {
+                customer.count = customer.count + 1;
+                customer.lastViewed = mins;
+                const upDatedCustomer = await customer.save();
+                console.log(upDatedCustomer);
+            };
+        } else {
+            return res.status(404).json({ message: "Cannot find customer" });
+        }
+    }
+    res.json(res.property);
+})
+
+//Getting One
+router.post('/get/:id', checkAuth, getProperty, async (req, res) => {
     if (!req.userData.agent) {//avals to false for agent true for customer
         const customer = await Customer.findById(req.userData.id);
         if (customer != null) {

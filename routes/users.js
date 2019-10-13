@@ -8,4 +8,8 @@ router.get('/', checkAuth, async (req, res) => {
     res.status(201).json(req.userData);
 });
 
+router.post('/get', checkAuth, async (req, res) => {
+    res.status(201).json(req.userData);
+});
+
 module.exports = router;
