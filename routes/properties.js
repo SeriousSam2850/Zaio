@@ -3,6 +3,7 @@ const router = express.Router();
 const Property = require('../models/property');
 const Customer = require('../models/customer');
 const checkAuth = require('../middleware/check-auth');
+const checkOwner = require('../middleware/check-owner');
 
 //Gettings All
 router.get('/', checkAuth, async (req, res) => {
@@ -80,48 +81,40 @@ router.post('/', checkAuth, async (req, res) => {
 });
 
 //Updating One
-router.patch('/:id', checkAuth, getProperty, async (req, res) => {
-    if (res.property.agentEmail != req.userData.email) {
-        return res.status(401).json({ message: "Not Your Property" })
-    } else {
-        if (req.body.name != null) {
-            res.property.name = req.body.name;
-        };
-        if (req.body.location != null) {
-            res.property.location = req.body.location;
-        };
-        if (req.body.imageUrl != null) {
-            res.property.imageUrl = req.body.imageUrl;
-        };
-        if (req.body.price != null) {
-            res.property.price = req.body.price;
-        };
-        if (req.body.geo != null) {
-            res.property.geo = req.body.geo;
-        };
+router.patch('/:id', checkAuth, getProperty, checkOwner, async (req, res) => {
+    if (req.body.name != null) {
+        res.property.name = req.body.name;
+    };
+    if (req.body.location != null) {
+        res.property.location = req.body.location;
+    };
+    if (req.body.imageUrl != null) {
+        res.property.imageUrl = req.body.imageUrl;
+    };
+    if (req.body.price != null) {
+        res.property.price = req.body.price;
+    };
+    if (req.body.geo != null) {
+        res.property.geo = req.body.geo;
+    };
     
-        try {
-            const updatedProperty = await res.property.save();
-            res.status(201).json(updatedProperty);
-        } catch (error) {
-            res.status(400).json({ message: error.message});
-        };
+    try {
+        const updatedProperty = await res.property.save();
+        res.status(201).json(updatedProperty);
+    } catch (error) {
+        res.status(400).json({ message: error.message});
     };
 })
 
 //Deleting One
-router.delete('/:id', checkAuth, getProperty, async (req, res) => {
-    if (res.property.agentEmail != req.userData.email) {
-        return res.status(401).json({ message: "Not Your Property" });
-    } else {
-        try {
-            await res.property.remove();
-            res.json({ message: 'Deleted Property'});
-        } catch (error) {
-            res.status(500).json({ message: error.message });
-        };
+router.delete('/:id', checkAuth, getProperty, checkOwner, async (req, res) => {
+    try {
+        await res.property.remove();
+        res.json({ message: 'Deleted Property'});
+    } catch (error) {
+        res.status(500).json({ message: error.message });
     };
-})
+});
 
 
 async function getProperty(req, res, next) {
