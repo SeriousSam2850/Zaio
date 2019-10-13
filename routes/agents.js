@@ -33,7 +33,22 @@ router.post('/', async (req, res) => {
                             .save()
                             .then(result => {
                                 console.log(result);
-                                res.status(201).json({ message: "User created" })
+                                const token = jwt.sign(
+                                    {
+                                        email: req.body.email,
+                                        firstname: req.body.firstname,
+                                        lastname: req.body.lastname,
+                                        agent: true
+                                    }, 
+                                    process.env.JWT_KEY, 
+                                    {
+                                        expiresIn: "2h"
+                                    }
+                                );
+                                return res.status(201).json({
+                                    message: "agent created",
+                                    token: token
+                                });
                             })
                             .catch(err => {
                                 console.log(err);
@@ -68,7 +83,6 @@ router.post('/authentication', (req, res) => {
                                 email: agent[0].email,
                                 firstname: agent[0].firstname,
                                 lastname: agent[0].lastname,
-                                id: agent[0]._id,
                                 agent: agent[0].agent
                             }, 
                             process.env.JWT_KEY, 
