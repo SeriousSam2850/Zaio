@@ -3,6 +3,7 @@ const router = express.Router()
 const Agent = require('../models/agent')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const checkAdmin = require('../middleware/check-admin');
 
 //Creating One
 router.post('/', async (req, res) => {
@@ -94,7 +95,7 @@ router.post('/authentication', (req, res) => {
 });
 
 //Deleting One
-router.delete('/:id', getAgent, async (req, res) => {
+router.delete('/:id', checkAdmin, getAgent, async (req, res) => {
     try {
         await res.agent.remove()
         res.json({ message: 'Deleted Agent'})
@@ -104,7 +105,7 @@ router.delete('/:id', getAgent, async (req, res) => {
 });
 
 //Getting All
-router.get('/', async (req, res) => {
+router.get('/', checkAdmin, async (req, res) => {
     try {
         const agents = await Agent.find()
         res.json(agents)
