@@ -32,9 +32,9 @@ router.get('/:id', checkAuth, getProperty, async (req, res) => {
         const customer = await Customer.findById(req.userData.id);
         if (customer != null) {
             let d = new Date();
-            let hours = d.getHours();
-            let minutes = d.getMinutes();
-            let mins = (hours * 60) + minutes;
+            let days = d.getDay();
+            let hours = d.getHours() + days * 24;
+            let mins = d.getMinutes() + hours * 60;
             if (customer.count == 4) {
                 if ((mins - customer.lastViewed) > 60) {
                     customer.count = 1;
