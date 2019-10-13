@@ -1,8 +1,8 @@
-const express = require('express')
-const router = express.Router()
-const Agent = require('../models/agent')
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
+const express = require('express');
+const router = express.Router();
+const Agent = require('../models/agent');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const checkAdmin = require('../middleware/check-admin');
 
 //Creating One

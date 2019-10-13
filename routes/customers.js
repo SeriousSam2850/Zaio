@@ -1,8 +1,9 @@
-const express = require('express')
-const router = express.Router()
-const Customer = require('../models/customer')
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
+const express = require('express');
+const router = express.Router();
+const Customer = require('../models/customer');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const checkAdmin = require('../middleware/check-admin');
 
 //Creating One
 router.post('/', async (req, res) => {
@@ -94,7 +95,7 @@ router.post('/authentication', (req, res) => {
 });
 
 //Deleting One
-router.delete('/:id', getCustomer, async (req, res) => {
+router.delete('/:id', checkAdmin, getCustomer, async (req, res) => {
     try {
         await res.customer.remove()
         res.json({ message: 'Deleted Customer'})
@@ -104,7 +105,7 @@ router.delete('/:id', getCustomer, async (req, res) => {
 });
 
 //Getting All
-router.get('/', async (req, res) => {
+router.get('/', checkAdmin, async (req, res) => {
     try {
         const customers = await Customer.find()
         res.json(customers)
