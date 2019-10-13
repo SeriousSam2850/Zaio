@@ -5,7 +5,7 @@ GET https://178.62.11.46:21880/properties/5da22324d3ecfd0980806780
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTcxNTEsImV4cCI6MTU3MDk2NDM1MX0.DMOP7uafgn1DpIm-wsOepECl825UwjfTwzsSDdOH6SQ"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQHRoaXMuY29tIiwiaWQiOiI1ZGEyZWVhN2Y5YjgxMTc0NTYyYWVkMjciLCJhZ2VudCI6ZmFsc2UsImlhdCI6MTU3MDk1OTAzMSwiZXhwIjoxNTcwOTY2MjMxfQ.YQZtYE-UMG2ZAQnsv5AbyUNMq1yRdDKpYisgm1hMHhQ"
 }
 
 ###
@@ -13,7 +13,7 @@ GET https://178.62.11.46:21880/properties
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTcxNTEsImV4cCI6MTU3MDk2NDM1MX0.DMOP7uafgn1DpIm-wsOepECl825UwjfTwzsSDdOH6SQ"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZUAxbWFpbC5jb20iLCJpZCI6IjVkYTIyMWI4ZDNlY2ZkMDk4MDgwNjc3ZiIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTc3MTYsImV4cCI6MTU3MDk2NDkxNn0.oRNssUXEkJbMCkEqNCaa1JtLmFJHtVI_tjJFLOeeSKU"
 }
 
 ###
@@ -29,28 +29,28 @@ Content-Type: application/json
         "lat": "20",
         "lng": "30"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTcxNTEsImV4cCI6MTU3MDk2NDM1MX0.DMOP7uafgn1DpIm-wsOepECl825UwjfTwzsSDdOH6SQ"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZUAxbWFpbC5jb20iLCJpZCI6IjVkYTIyMWI4ZDNlY2ZkMDk4MDgwNjc3ZiIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTc3MTYsImV4cCI6MTU3MDk2NDkxNn0.oRNssUXEkJbMCkEqNCaa1JtLmFJHtVI_tjJFLOeeSKU"
 }
 
 ###
 
-DELETE https://178.62.11.46:21880/properties/5da091cd69932730bbef3ebd
+DELETE https://178.62.11.46:21880/properties/5da2e9d344f8d0199a57d5f5
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTcxNTEsImV4cCI6MTU3MDk2NDM1MX0.DMOP7uafgn1DpIm-wsOepECl825UwjfTwzsSDdOH6SQ"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZUAxbWFpbC5jb20iLCJpZCI6IjVkYTIyMWI4ZDNlY2ZkMDk4MDgwNjc3ZiIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTc3MTYsImV4cCI6MTU3MDk2NDkxNn0.oRNssUXEkJbMCkEqNCaa1JtLmFJHtVI_tjJFLOeeSKU"
 }
 
 ###
 
-PATCH https://178.62.11.46:21880/properties/5da091cd69932730bbef3ebd
+PATCH https://178.62.11.46:21880/properties/5da0925f69932730bbef3ebe
 Content-Type:  application/json
 
 {
     "name": "Four",
     "price": "5000",
     "imageUrl": "pictureURLhere",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTcxNTEsImV4cCI6MTU3MDk2NDM1MX0.DMOP7uafgn1DpIm-wsOepECl825UwjfTwzsSDdOH6SQ"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZUAxbWFpbC5jb20iLCJpZCI6IjVkYTIyMWI4ZDNlY2ZkMDk4MDgwNjc3ZiIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTc3MTYsImV4cCI6MTU3MDk2NDkxNn0.oRNssUXEkJbMCkEqNCaa1JtLmFJHtVI_tjJFLOeeSKU"
 }
 
 //========================================================================
@@ -86,8 +86,18 @@ Content-Type: application/json
 
 ###
 GET https://178.62.11.46:21880/agents
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTgwOTIsImV4cCI6MTU3MDk2NTI5Mn0.Dkp1Dc5sp0Tvntzx4tMDC-GCTAVBSWO2ayQVFJAq70g"
+}
 ###
-DELETE https://178.62.11.46:21880/agents/5d9f6c9d701c1b3a9e0ae27a
+DELETE https://178.62.11.46:21880/agents/5d9fa9ecb999c5450af480cc
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTgwOTIsImV4cCI6MTU3MDk2NTI5Mn0.Dkp1Dc5sp0Tvntzx4tMDC-GCTAVBSWO2ayQVFJAq70g"
+}
 
 //========================================================================
 //Customers
@@ -97,7 +107,7 @@ POST https://178.62.11.46:21880/customers/authentication
 Content-Type: application/json
 
 {
-    "email": "test1@this.com",
+    "email": "test2@this.com",
     "password": "P@55"
 }
 ###
@@ -105,12 +115,22 @@ POST https://178.62.11.46:21880/customers
 Content-Type: application/json
 
 {
-    "firstname": "first",
+    "firstname": "second",
     "lastname": "last",
-    "email": "test1@this.com",
+    "email": "test2@this.com",
     "password": "P@55"
 }
 ###
 GET https://178.62.11.46:21880/customers
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTgwOTIsImV4cCI6MTU3MDk2NTI5Mn0.Dkp1Dc5sp0Tvntzx4tMDC-GCTAVBSWO2ayQVFJAq70g"
+}
 ###
-DELETE https://178.62.11.46:21880/customers/5d9f7521e2d3bd3c6c57037d
+DELETE https://178.62.11.46:21880/customers/5d9f99ad339067427834b1b8
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTgwOTIsImV4cCI6MTU3MDk2NTI5Mn0.Dkp1Dc5sp0Tvntzx4tMDC-GCTAVBSWO2ayQVFJAq70g"
+}

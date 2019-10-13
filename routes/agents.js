@@ -66,6 +66,8 @@ router.post('/authentication', (req, res) => {
                         const token = jwt.sign(
                             {
                                 email: agent[0].email,
+                                firstname: agent[0].firstname,
+                                lastname: agent[0].lastname,
                                 id: agent[0]._id,
                                 agent: agent[0].agent
                             }, 

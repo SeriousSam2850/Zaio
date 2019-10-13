@@ -29,11 +29,13 @@ app.use(function(req, res, next) {
 const propertiesRouter = require('./routes/properties.js' )
 const customersRouter = require('./routes/customers.js' )
 const agentsRouter = require('./routes/agents.js' )
+const usersRouter = require('./routes/users.js' )
 
 // Using the routers for specified paths
-app.use('/properties', propertiesRouter)
-app.use('/customers', customersRouter)
-app.use('/agents', agentsRouter)
+app.use('/properties', propertiesRouter);
+app.use('/customers', customersRouter);
+app.use('/agents', agentsRouter);
+app.use('/users', usersRouter);
 
 app.listen(21870, () => console.log("Unsecure server"));
 
