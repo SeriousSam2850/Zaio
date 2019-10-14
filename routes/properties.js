@@ -52,24 +52,24 @@ router.post('/get/agent/:email', checkAuth, async (req, res) => {
 //Getting One
 router.get('/:id', checkAuth, getProperty, async (req, res) => {
     if (!req.userData.agent) {//avals to false for agent true for customer
-        const customer = await Customer.findById(req.userData.id);
-        if (customer != null) {
+        const customer = await Customer.find({ email: req.userData.email });
+        if (customer[0] != null) {
             let d = new Date();
             let days = d.getDay();
             let hours = d.getHours() + days * 24;
             let mins = d.getMinutes() + hours * 60;
-            if (customer.count == 4) {
-                if ((mins - customer.lastViewed) > 60) {
-                    customer.count = 1;
-                    customer.lastViewed = mins;
-                    await customer.save();
+            if (customer[0].count == 4) {
+                if ((mins - customer[0].lastViewed) > 60) {
+                    customer[0].count = 1;
+                    customer[0].lastViewed = mins;
+                    await customer[0].save();
                 } else {
                     return res.status(401).json({ message: "Sorry no more views, wait a while" });
                 };
             } else {
-                customer.count = customer.count + 1;
-                customer.lastViewed = mins;
-                const upDatedCustomer = await customer.save();
+                customer[0].count = customer[0].count + 1;
+                customer[0].lastViewed = mins;
+                const upDatedCustomer = await customer[0].save();
                 console.log(upDatedCustomer);
             };
         } else {
@@ -82,24 +82,24 @@ router.get('/:id', checkAuth, getProperty, async (req, res) => {
 //Getting One
 router.post('/get/:id', checkAuth, getProperty, async (req, res) => {
     if (!req.userData.agent) {//avals to false for agent true for customer
-        const customer = await Customer.findById(req.userData.id);
-        if (customer != null) {
+        const customer = await Customer.find({ email: req.userData.email });
+        if (customer[0] != null) {
             let d = new Date();
             let days = d.getDay();
             let hours = d.getHours() + days * 24;
             let mins = d.getMinutes() + hours * 60;
-            if (customer.count == 4) {
-                if ((mins - customer.lastViewed) > 60) {
-                    customer.count = 1;
-                    customer.lastViewed = mins;
-                    await customer.save();
+            if (customer[0].count == 4) {
+                if ((mins - customer[0].lastViewed) > 60) {
+                    customer[0].count = 1;
+                    customer[0].lastViewed = mins;
+                    await customer[0].save();
                 } else {
                     return res.status(401).json({ message: "Sorry no more views, wait a while" });
                 };
             } else {
-                customer.count = customer.count + 1;
-                customer.lastViewed = mins;
-                const upDatedCustomer = await customer.save();
+                customer[0].count = customer[0].count + 1;
+                customer[0].lastViewed = mins;
+                const upDatedCustomer = await customer[0].save();
                 console.log(upDatedCustomer);
             };
         } else {

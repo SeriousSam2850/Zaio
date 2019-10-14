@@ -5,7 +5,14 @@ GET https://178.62.11.46:21880/properties/5da22324d3ecfd0980806780
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQHRoaXMuY29tIiwiaWQiOiI1ZGEyZWVhN2Y5YjgxMTc0NTYyYWVkMjciLCJhZ2VudCI6ZmFsc2UsImlhdCI6MTU3MDk1OTAzMSwiZXhwIjoxNTcwOTY2MjMxfQ.YQZtYE-UMG2ZAQnsv5AbyUNMq1yRdDKpYisgm1hMHhQ"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzQHRoaXMuY29tIiwiZmlyc3RuYW1lIjoidGhpcmQiLCJsYXN0bmFtZSI6Imxhc3QiLCJhZ2VudCI6dHJ1ZSwiaWF0IjoxNTcwOTg3OTYwLCJleHAiOjE1NzA5OTUxNjB9.TAh62ie_z3QNuDD9w815qmvdudqBYPhj6RIxhIDvcCU"
+}
+###
+POST https://178.62.11.46:21880/properties/get/5da358eed014626b0a73cca0
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzQHRoaXMuY29tIiwiZmlyc3RuYW1lIjoidGhpcmQiLCJsYXN0bmFtZSI6Imxhc3QiLCJhZ2VudCI6dHJ1ZSwiaWF0IjoxNTcwOTg3OTYwLCJleHAiOjE1NzA5OTUxNjB9.TAh62ie_z3QNuDD9w815qmvdudqBYPhj6RIxhIDvcCU"
 }
 
 ###
@@ -13,11 +20,27 @@ GET https://178.62.11.46:21880/properties
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZUAxbWFpbC5jb20iLCJpZCI6IjVkYTIyMWI4ZDNlY2ZkMDk4MDgwNjc3ZiIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTc3MTYsImV4cCI6MTU3MDk2NDkxNn0.oRNssUXEkJbMCkEqNCaa1JtLmFJHtVI_tjJFLOeeSKU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRoZW1hbkBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJUSEVNQU4iLCJsYXN0bmFtZSI6IlRIRU1BTiIsImFnZW50IjpmYWxzZSwiaWF0IjoxNTcwOTk4NjE4LCJleHAiOjE1NzEwMDU4MTh9.HYEknyoKp3dpgu0KTMAbU9K5VMtWHDQSuQR1jDuKrA4"
+}
+###
+POST https://178.62.11.46:21880/properties/get
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnRoZW1hbkBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJUSEVNQU4iLCJsYXN0bmFtZSI6IlRIRU1BTiIsImFnZW50IjpmYWxzZSwiaWF0IjoxNTcwOTk4NjE4LCJleHAiOjE1NzEwMDU4MTh9.HYEknyoKp3dpgu0KTMAbU9K5VMtWHDQSuQR1jDuKrA4"
 }
 
 ###
 
+
+DELETE https://178.62.11.46:21880/properties/5da3595fd014626b0a73cca3
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJmaXJzdG5hbWUiOiJKdXN0aW4iLCJsYXN0bmFtZSI6IkFicmFtcyIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5ODgyNDcsImV4cCI6MTU3MDk5NTQ0N30.MBHTDltQ2cfnsF6s5XLJGOdLPpVcVWptfBUcmCxEDL8"
+}
+
+###
 POST https://178.62.11.46:21880/properties
 Content-Type: application/json
 
@@ -29,28 +52,20 @@ Content-Type: application/json
         "lat": "20",
         "lng": "30"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZUAxbWFpbC5jb20iLCJpZCI6IjVkYTIyMWI4ZDNlY2ZkMDk4MDgwNjc3ZiIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTc3MTYsImV4cCI6MTU3MDk2NDkxNn0.oRNssUXEkJbMCkEqNCaa1JtLmFJHtVI_tjJFLOeeSKU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q0QHRoaXMuY29tIiwiZmlyc3RuYW1lIjoidGhpcmQiLCJsYXN0bmFtZSI6Imxhc3QiLCJhZ2VudCI6ZmFsc2UsImlhdCI6MTU3MDk4ODIwNiwiZXhwIjoxNTcwOTk1NDA2fQ.05bKEZyPMol0B5x9j15uiij8GAH7oA4eJ0PoLwWr0dU"
 }
+
 
 ###
 
-DELETE https://178.62.11.46:21880/properties/5da2e9d344f8d0199a57d5f5
-Content-Type: application/json
-
-{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZUAxbWFpbC5jb20iLCJpZCI6IjVkYTIyMWI4ZDNlY2ZkMDk4MDgwNjc3ZiIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTc3MTYsImV4cCI6MTU3MDk2NDkxNn0.oRNssUXEkJbMCkEqNCaa1JtLmFJHtVI_tjJFLOeeSKU"
-}
-
-###
-
-PATCH https://178.62.11.46:21880/properties/5da0925f69932730bbef3ebe
+PATCH https://178.62.11.46:21880/properties/5da3602f82639b73b7e781b1
 Content-Type:  application/json
 
 {
     "name": "Four",
     "price": "5000",
     "imageUrl": "pictureURLhere",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9uZUAxbWFpbC5jb20iLCJpZCI6IjVkYTIyMWI4ZDNlY2ZkMDk4MDgwNjc3ZiIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTc3MTYsImV4cCI6MTU3MDk2NDkxNn0.oRNssUXEkJbMCkEqNCaa1JtLmFJHtVI_tjJFLOeeSKU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzQHRoaXMuY29tIiwiZmlyc3RuYW1lIjoidGhpcmQiLCJsYXN0bmFtZSI6Imxhc3QiLCJhZ2VudCI6dHJ1ZSwiaWF0IjoxNTcwOTg3OTYwLCJleHAiOjE1NzA5OTUxNjB9.TAh62ie_z3QNuDD9w815qmvdudqBYPhj6RIxhIDvcCU"
 }
 
 //========================================================================
@@ -89,14 +104,14 @@ GET https://178.62.11.46:21880/agents
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTgwOTIsImV4cCI6MTU3MDk2NTI5Mn0.Dkp1Dc5sp0Tvntzx4tMDC-GCTAVBSWO2ayQVFJAq70g"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJmaXJzdG5hbWUiOiJKdXN0aW4iLCJsYXN0bmFtZSI6IkFicmFtcyIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5ODgyNDcsImV4cCI6MTU3MDk5NTQ0N30.MBHTDltQ2cfnsF6s5XLJGOdLPpVcVWptfBUcmCxEDL8"
 }
 ###
-DELETE https://178.62.11.46:21880/agents/5d9fa9ecb999c5450af480cc
+DELETE https://178.62.11.46:21880/agents/5da221b8d3ecfd098080677f
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTgwOTIsImV4cCI6MTU3MDk2NTI5Mn0.Dkp1Dc5sp0Tvntzx4tMDC-GCTAVBSWO2ayQVFJAq70g"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJmaXJzdG5hbWUiOiJKdXN0aW4iLCJsYXN0bmFtZSI6IkFicmFtcyIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5ODgyNDcsImV4cCI6MTU3MDk5NTQ0N30.MBHTDltQ2cfnsF6s5XLJGOdLPpVcVWptfBUcmCxEDL8"
 }
 
 //========================================================================
@@ -115,9 +130,9 @@ POST https://178.62.11.46:21880/customers
 Content-Type: application/json
 
 {
-    "firstname": "second",
+    "firstname": "third",
     "lastname": "last",
-    "email": "test2@this.com",
+    "email": "test4@this.com",
     "password": "P@55"
 }
 ###
@@ -125,12 +140,23 @@ GET https://178.62.11.46:21880/customers
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTgwOTIsImV4cCI6MTU3MDk2NTI5Mn0.Dkp1Dc5sp0Tvntzx4tMDC-GCTAVBSWO2ayQVFJAq70g"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJmaXJzdG5hbWUiOiJKdXN0aW4iLCJsYXN0bmFtZSI6IkFicmFtcyIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5ODgyNDcsImV4cCI6MTU3MDk5NTQ0N30.MBHTDltQ2cfnsF6s5XLJGOdLPpVcVWptfBUcmCxEDL8"
 }
 ###
-DELETE https://178.62.11.46:21880/customers/5d9f99ad339067427834b1b8
+DELETE https://178.62.11.46:21880/customers/5da37b67ea1b26015959f33a
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJpZCI6IjVkYTIxNzQ5YmJlN2MxMmZlMWNlMjFmOSIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5NTgwOTIsImV4cCI6MTU3MDk2NTI5Mn0.Dkp1Dc5sp0Tvntzx4tMDC-GCTAVBSWO2ayQVFJAq70g"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1c3Rpbi5hYnJhbXNAaG90bWFpbC5jb20iLCJmaXJzdG5hbWUiOiJKdXN0aW4iLCJsYXN0bmFtZSI6IkFicmFtcyIsImFnZW50Ijp0cnVlLCJpYXQiOjE1NzA5ODgyNDcsImV4cCI6MTU3MDk5NTQ0N30.MBHTDltQ2cfnsF6s5XLJGOdLPpVcVWptfBUcmCxEDL8"
+}
+
+###
+//=============================================================================
+//USERS
+
+GET https://178.62.11.46:21880/users
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QzQHRoaXMuY29tIiwiZmlyc3RuYW1lIjoidGhpcmQiLCJsYXN0bmFtZSI6Imxhc3QiLCJhZ2VudCI6dHJ1ZSwiaWF0IjoxNTcwOTg3OTYwLCJleHAiOjE1NzA5OTUxNjB9.TAh62ie_z3QNuDD9w815qmvdudqBYPhj6RIxhIDvcCU"
 }
