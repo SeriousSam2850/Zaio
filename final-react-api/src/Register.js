@@ -30,7 +30,7 @@ export default class Register extends Component {
       .then(res => {
         cookie.set("token", res.data.access_token);
         cookie.set("user", data);
-        //this.props.history.push("/profile");
+        this.props.history.push("/profile");
       })
       .catch(e => this.setState({ errors: e.response.data.errors }));
   };
